@@ -14,12 +14,19 @@
 	if(acao.equals("incluirMorador")){
 		String nome = request.getParameter("nome");
 		String cpf = request.getParameter("cpf");
-		int numApart = Integer.parseInt(request.getParameter("numApart"));
+		String email = request.getParameter("email");
+		String telResidencial = request.getParameter("telResidencial");
+		String telComercial = request.getParameter("telComercial");
+		String celular = request.getParameter("celular");
+		String doc = request.getParameter("doc");
+		String tipoMorador = request.getParameter("morador");
+		String veiculo = request.getParameter("veiculo");
+		String senha = request.getParameter("senha");
 		
 		Morador morador = new Morador();
 		morador.setNome(nome);
 		morador.setCpf(cpf);
-		morador.setNumApart(numApart);
+		
 		
 		MoradorControl mc = new MoradorControl();
 		mc.salvarMorador(morador);
@@ -29,13 +36,21 @@
 		long id = Long.parseLong(request.getParameter("id"));
 		String nome = request.getParameter("nome");
 		String cpf = request.getParameter("cpf");
-		int numApart = Integer.parseInt(request.getParameter("numApart"));
+		String email = request.getParameter("email");
+		String telResidencial = request.getParameter("telResidencial");
+		String telComercial = request.getParameter("telComercial");
+		String celular = request.getParameter("celular");
+		String doc = request.getParameter("doc");
+		String tipoMorador = request.getParameter("morador");
+		String veiculo = request.getParameter("veiculo");
+		String senha = request.getParameter("senha");
 		
 		Morador morador = new Morador();
 		morador.setId(id);
 		morador.setNome(nome);
 		morador.setCpf(cpf);
-		morador.setNumApart(numApart);
+		
+		
 		
 		MoradorControl mc = new MoradorControl();
 		mc.alterarMorador(morador);

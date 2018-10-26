@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<marquee><h1><b>O pedrinho tem dois Empregos</b></h1></marquee>
-	<marquee><h2><b>TESTE</b></h2></marquee>
+	<marquee><h1><b>O pedrinho Trabalha na itaipu</b></h1></marquee>
 </body>
 </html>
