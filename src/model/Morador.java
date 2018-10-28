@@ -4,14 +4,25 @@ public class Morador{
 
 	private long id;
 	
-	
 	private String nome;
-	
 	
 	private String cpf;
 	
+	private String email;
 	
-	private int numApart;
+	private String telefoneResidencial;
+	
+	private String telefoneComercial;
+	
+	private String celular;
+		
+	private String tipoDocumento;
+	
+	private String tipoMorador;
+
+	private String placaVeiculo;
+	
+	private String senha;
 	
 	public long getId() {
 		return id;
@@ -37,12 +48,68 @@ public class Morador{
 		this.cpf = cpf;
 	}
 
-	public int getNumApart() {
-		return numApart;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setNumApart(int numApart) {
-		this.numApart = numApart;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getTelefoneResidencial() {
+		return telefoneResidencial;
+	}
+
+	public void setTelefoneResidencial(String telefoneResidencial) {
+		this.telefoneResidencial = telefoneResidencial;
+	}
+
+	public String getTelefoneComercial() {
+		return telefoneComercial;
+	}
+
+	public void setTelefoneComercial(String telefoneComercial) {
+		this.telefoneComercial = telefoneComercial;
+	}
+
+	public String getCelular() {
+		return celular;
+	}
+
+	public void setCelular(String celular) {
+		this.celular = celular;
+	}
+
+	public String getTipoDocumento() {
+		return tipoDocumento;
+	}
+
+	public void setTipoDocumento(String tipoDocumento) {
+		this.tipoDocumento = tipoDocumento;
+	}
+
+	public String getTipoMorador() {
+		return tipoMorador;
+	}
+
+	public void setTipoMorador(String tipoMorador) {
+		this.tipoMorador = tipoMorador;
+	}
+
+	public String getPlacaVeiculo() {
+		return placaVeiculo;
+	}
+
+	public void setPlacaVeiculo(String placaVeiculo) {
+		this.placaVeiculo = placaVeiculo;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 }

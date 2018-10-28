@@ -1,5 +1,6 @@
-<%@page import="control.MoradorControl"%>
+
 <%@page import="model.Morador"%>
+<%@page import="control.MoradorControl"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -21,16 +22,24 @@
 		String doc = request.getParameter("doc");
 		String tipoMorador = request.getParameter("morador");
 		String veiculo = request.getParameter("veiculo");
-		String senha = request.getParameter("senha");
+		String senha = request.getParameter("senha");	
 		
-		Morador morador = new Morador();
-		morador.setNome(nome);
-		morador.setCpf(cpf);
-		
+		Morador m = new Morador();
+		m.setNome(nome);
+		m.setCpf(cpf);
+		m.setEmail(email);
+		m.setTelefoneResidencial(telResidencial);
+		m.setTelefoneComercial(telComercial);
+		m.setCelular(celular);
+		m.setTipoDocumento(doc);
+		m.setTipoMorador(tipoMorador);
+		m.setPlacaVeiculo(veiculo);
+		m.setSenha(senha);
 		
 		MoradorControl mc = new MoradorControl();
-		mc.salvarMorador(morador);
+		mc.salvarMorador(m);
 		response.sendRedirect("listarMoradores.jsp");
+		
 	}else if(acao.equals("editarMorador")){
 		
 		long id = Long.parseLong(request.getParameter("id"));
@@ -45,16 +54,23 @@
 		String veiculo = request.getParameter("veiculo");
 		String senha = request.getParameter("senha");
 		
-		Morador morador = new Morador();
-		morador.setId(id);
-		morador.setNome(nome);
-		morador.setCpf(cpf);
-		
-		
+		Morador m = new Morador();
+		m.setId(id);
+		m.setNome(nome);
+		m.setCpf(cpf);
+		m.setEmail(email);
+		m.setTelefoneResidencial(telResidencial);
+		m.setTelefoneComercial(telComercial);
+		m.setCelular(celular);
+		m.setTipoDocumento(doc);
+		m.setTipoMorador(tipoMorador);
+		m.setPlacaVeiculo(veiculo);
+		m.setSenha(senha);
 		
 		MoradorControl mc = new MoradorControl();
-		mc.alterarMorador(morador);
+		mc.alterarMorador(m);
 		response.sendRedirect("listarMoradores.jsp");
+		
 	}else if(acao.equals("excluirMorador")){
 		String id = request.getParameter("id");
 		MoradorControl mc = new MoradorControl();

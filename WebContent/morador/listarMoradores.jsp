@@ -33,22 +33,46 @@
 				<thead>
 					<th>Nome</th>
 					<th>CPF</th>
-					<th>Número do Apartamento</th>
+					<th>Telefone Res</th>
+					<th>Telefone Com</th>
+					<th>Celular</th>
+					<th>Tipo de Documento</th>
+					<th>Tipo de Morador</th>
+					<th>email</th>
+					<th>Placa do veículo</th>
 				</thead>
 				<tbody>
 					<%
 					if(moradores != null)
 						for(Morador morador : moradores) {
 					%>
-					<tr>
-						<td>
+						<tr>
+							<td>
 							<% out.print(morador.getNome()); %>
 							</td>
 							<td>
 								<% out.print(morador.getCpf()); %>
 							</td>
 							<td>
-								<% out.print(morador.getNumApart()); %>
+								<% out.print(morador.getTelefoneResidencial()); %>
+							</td>
+							<td>
+								<% out.print(morador.getTelefoneComercial()); %>
+							</td>
+							<td>
+								<% out.print(morador.getCelular()); %>
+							</td>
+							<td>
+								<% out.print(morador.getTipoDocumento()); %>
+							</td>
+							<td>
+								<% out.print(morador.getTipoMorador()); %>
+							</td>
+							<td>
+								<% out.print(morador.getEmail()); %>
+							</td>
+							<td>
+								<% out.print(morador.getPlacaVeiculo()); %>
 							</td>
 							<td class="mw-200">
 								<a href="editarMorador.jsp?id=<%=morador.getId() %>"class="btn btn-primary">Editar</a>
@@ -62,6 +86,5 @@
 		</div>
 	</div>
 </div>
-	
 </body>
 </html>

@@ -9,8 +9,9 @@ import wsclient.RESTConexao;
 
 public class MoradorControl {
 
+	@SuppressWarnings("unchecked")
 	public List<Morador> listar(){
-		String url = "http://localhost:8080/GerenciaDeMoradoresCondominioBack/api/morador/listarMorador";
+		String url = "http://localhost:8080/GerenciaDeMoradoresCondominioBack/api/morador/listar";
 		Map<String, Object> queryParams = new HashMap<String, Object>();
 		RESTConexao rest = new RESTConexao();
 		return (List<Morador>) rest.getList(url, "GET", Morador.class, null, queryParams);

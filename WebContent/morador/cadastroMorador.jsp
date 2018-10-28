@@ -30,7 +30,7 @@
 <body>
 <div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form" method="POST" action="crudMorador.jsp">
+			<form class="contact100-form validate-form" method="POST" action="../morador/crudMorador.jsp">
 			<input type="hidden" name="acao" value="incluirMorador">
 				<span class="contact100-form-title">
 					Cadastro Morador

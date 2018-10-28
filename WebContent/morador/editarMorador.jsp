@@ -28,10 +28,21 @@
 			  CPF:<br>
 			  <input type="text" name="cpf" class="form-control" value="<%=m.getCpf()%>">
 			  <br>
-			  Número do Apartamento:<br>
-			  <input type="number" name="numApart" class="form-control" value="<%=m.getNumApart()%>"><br>
-			  
-				
+			  Telefone Residencial:<br>
+			  <input type="text" name="telResidencial" class="form-control" value="<%=m.getTelefoneResidencial()%>"><br>
+			  <br>
+			  <input type="text" name="telResidencial" class="form-control" value="<%=m.getTelefoneComercial()%>"><br>
+			  <br>
+			  <input type="text" name="celular" class="form-control" value="<%=m.getCelular()%>"><br>
+			  <br>
+			  <input type="text" name="doc" class="form-control" value="<%=m.getTipoDocumento()%>"><br>
+			  <br>
+			  <input type="text" name="morador" class="form-control" value="<%=m.getTipoMorador()%>"><br>
+			  <br>
+			  <input type="text" name="veiculo" class="form-control" value="<%=m.getPlacaVeiculo()%>"><br>
+			  <br>
+			  <input type="text" name="senha" class="form-control" value="<%=m.getSenha()%>"><br>
+			  <br>
 				<input type="submit" class="btn btn-primary" value="Salvar">
 				<input type="button" onclick="history.back()" class="btn btn-default" value="Cancelar">
 			
