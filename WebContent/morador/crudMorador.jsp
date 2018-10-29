@@ -13,6 +13,7 @@
 <%
 	String acao = request.getParameter("acao");
 	if(acao.equals("incluirMorador")){
+		String tipoUsuario = request.getParameter("tipoUsuario");
 		String nome = request.getParameter("nome");
 		String cpf = request.getParameter("cpf");
 		String email = request.getParameter("email");
@@ -22,6 +23,7 @@
 		String doc = request.getParameter("doc");
 		String tipoMorador = request.getParameter("morador");
 		String veiculo = request.getParameter("veiculo");
+		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");	
 		
 		Morador m = new Morador();
@@ -34,6 +36,8 @@
 		m.setTipoDocumento(doc);
 		m.setTipoMorador(tipoMorador);
 		m.setPlacaVeiculo(veiculo);
+		m.setTipoUsuario(tipoUsuario);
+		m.setLogin(login);
 		m.setSenha(senha);
 		
 		MoradorControl mc = new MoradorControl();
@@ -52,6 +56,7 @@
 		String doc = request.getParameter("doc");
 		String tipoMorador = request.getParameter("morador");
 		String veiculo = request.getParameter("veiculo");
+		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
 		Morador m = new Morador();
@@ -65,6 +70,7 @@
 		m.setTipoDocumento(doc);
 		m.setTipoMorador(tipoMorador);
 		m.setPlacaVeiculo(veiculo);
+		m.setLogin(login);
 		m.setSenha(senha);
 		
 		MoradorControl mc = new MoradorControl();

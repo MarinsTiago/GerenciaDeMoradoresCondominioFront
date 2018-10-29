@@ -1,6 +1,6 @@
 package model;
 
-public class Morador{
+public class Morador extends Usuario{
 
 	private long id;
 	

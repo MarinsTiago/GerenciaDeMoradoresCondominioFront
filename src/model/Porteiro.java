@@ -1,6 +1,6 @@
 package model;
 
-public class Porteiro {
+public class Porteiro extends Usuario{
 
 	private long id;
 	

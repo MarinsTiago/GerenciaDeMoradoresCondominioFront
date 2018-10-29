@@ -11,6 +11,7 @@
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form" method="POST" action="../morador/crudMorador.jsp">
 			<input type="hidden" name="acao" value="incluirMorador">
+			<input type="hidden" name="tipoUsuario" value="morador"><!--Não alterar este campo-->
 				<span class="contact100-form-title">
 					Cadastro Morador
 				</span>
@@ -72,6 +73,12 @@
 				<div class="wrap-input100 validate-input" data-validate = "number is required">
 					<span class="label-input100">Veiculo</span>
 					<input class="input100" type="text" name="veiculo" class="form-control" placeholder="Placa do Veiculo">
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Login</span>
+					<input class="input100" type="text" name="login" class="form-control" placeholder="login">
 					<span class="focus-input100"></span>
 				</div>
 				

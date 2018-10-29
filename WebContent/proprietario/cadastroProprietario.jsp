@@ -7,15 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="../porteiro/crudPorteiro.jsp" method="POST">
-	<input type="hidden" name="acao" value="incluirPorteiro">
-	<input type="hidden" name="tipoUsuario" value="porteiro"><!--Não alterar este campo-->
-	Nome:<input type="text" name="nome"><br>
-	CPF:<input type="text" name="cpf"><br>
-	Telefone:<input type="text" name="telefone"><br>
-	Celular:<input type="text" name="celular"><br>
+	<form action="../proprietario/crudProprietario.jsp" method="POST">
+	<input type="hidden" name="acao" value="incluirProprietario">
+	<input type="hidden" name="tipoUsuario" value="morador"><!--Não alterar este campo-->
 	E-mail:<input type="email" name="email"><br>
-	Senha:<input type="text" name="senha"><br>
+	Senha:<input type="password" name="senha"><br>
 	<input type="submit" value="Cadastrar">
 	</form>
 </body>

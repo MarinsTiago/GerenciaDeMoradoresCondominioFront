@@ -1,6 +1,6 @@
 package model;
 
-public class ProprietarioApartamento {
+public class Proprietario extends Usuario{
 
 	private long id;
 	

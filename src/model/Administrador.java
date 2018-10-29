@@ -1,12 +1,11 @@
 package model;
 
-public class Administrador {
+public class Administrador extends Usuario{
 
 	private long id;
 	
 	private String email;
 	
-	private String senha;
 
 	public long getId() {
 		return id;
@@ -24,11 +23,4 @@ public class Administrador {
 		this.email = email;
 	}
 
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
 }
