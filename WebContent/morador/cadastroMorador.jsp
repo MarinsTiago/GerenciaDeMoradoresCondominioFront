@@ -22,7 +22,7 @@
 					<span class="focus-input100"></span>				
 				</div>
 				
-				<!-- 
+				
 				<div class="wrap-input100 validate-input" data-validate="Cpf is required">
 					<span class="label-input100">CPF</span>
 					<input class="input100" type="text" name="cpf" class="form-control" placeholder="CPF">
@@ -32,12 +32,6 @@
 				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 					<span class="label-input100">Email</span>
 					<input class="input100" type="text" name="email" placeholder="E-mail">
-					<span class="focus-input100"></span>
-				</div>
-				
-				<div class="wrap-input100 validate-input" data-validate = "number is required">
-					<span class="label-input100">N° Apartamento</span>
-					<input class="input100" type="number" name="numApart" class="form-control" placeholder="N° Apartamento">
 					<span class="focus-input100"></span>
 				</div>
 				
@@ -76,7 +70,7 @@
 					<input class="input100" type="text" name="veiculo" class="form-control" placeholder="Placa do Veiculo">
 					<span class="focus-input100"></span>
 				</div>
-				-->
+				
 				<div class="wrap-input100 validate-input">
 					<span class="label-input100">Login</span>
 					<input class="input100" type="text" name="login" class="form-control" placeholder="login">

@@ -32,14 +32,14 @@
 			<table class="table table-hover table-striped">
 				<thead>
 					<th>Nome</th>
-					<!-- <th>CPF</th>
+					<th>CPF</th>
 					<th>Telefone Res</th>
 					<th>Telefone Com</th>
 					<th>Celular</th>
 					<th>Tipo de Documento</th>
 					<th>Tipo de Morador</th>
 					<th>email</th>
-					<th>Placa do veículo</th> -->
+					<th>Placa do veículo</th>
 				</thead>
 				<tbody>
 					<%
@@ -50,7 +50,7 @@
 							<td>
 							<% out.print(morador.getNome()); %>
 							</td>
-							<%-- <td>
+							<td>
 								<% out.print(morador.getCpf()); %>
 							</td>
 							<td>
@@ -73,7 +73,7 @@
 							</td>
 							<td>
 								<% out.print(morador.getPlacaVeiculo()); %>
-							</td> --%>
+							</td>
 							<td class="mw-200">
 								<a href="editarMorador.jsp?id=<%=morador.getId() %>"class="btn btn-primary">Editar</a>
 								<a href="crudMorador.jsp?id=<%=morador.getId() %>&acao=excluirMorador" onclick="return confirmacaoDelecao()" class="btn btn-danger">Excluir</a>

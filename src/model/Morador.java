@@ -4,7 +4,7 @@ public class Morador extends Usuario{
 	
 	private String nome;
 	
-	/*private String cpf;
+	private String cpf;
 	
 	private String email;
 	
@@ -18,8 +18,8 @@ public class Morador extends Usuario{
 	
 	private String tipoMorador;
 
-	private String placaVeiculo;*/
-
+	private String placaVeiculo;
+	
 	public String getNome() {
 		return nome;
 	}
@@ -28,7 +28,7 @@ public class Morador extends Usuario{
 		this.nome = nome;
 	}
 
-	/*public String getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
@@ -90,5 +90,5 @@ public class Morador extends Usuario{
 
 	public void setPlacaVeiculo(String placaVeiculo) {
 		this.placaVeiculo = placaVeiculo;
-	}*/
+	}
 }

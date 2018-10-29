@@ -10,19 +10,23 @@
 	
 	LoginControl lc = new LoginControl();
 	
-	Object usuario = lc.validarLogin(login, senha);
+	Usuario usuario = lc.validarLogin(login, senha);
 	
 	if(usuario != null){
 		sessao.setAttribute("usuario", usuario);
-		if(usuario instanceof Morador){
-			response.sendRedirect(request.getContextPath() + "../moradore/listarMoradores.jsp");
-		}else if(usuario instanceof Porteiro){
-			response.sendRedirect(request.getContextPath() + "../moradore/listarPorteiro.jsp");
-		}else if(usuario instanceof Proprietario){
-			response.sendRedirect(request.getContextPath() + "../moradore/listarProprietario.jsp");
+		if(usuario.getTipoUsuario().equals("morador")){
+			response.sendRedirect(request.getContextPath() + "/morador/listarMoradores.jsp");
+			System.out.println("Foi!!");
+		}else if(usuario.getTipoUsuario().equals("porteiro")){
+			response.sendRedirect(request.getContextPath() + "/porteiro/listarPorteiro.jsp");
+			System.out.println("Foi!!");
+		}else if(usuario.getTipoUsuario().equals("proprietario")){
+			response.sendRedirect(request.getContextPath() + "/proprietario/listarProprietario.jsp");
+			System.out.println("Foi!!");
 		}
 		
 	}else{
+		System.out.println("Não Foi Otário");
 		response.sendRedirect(request.getContextPath() + "/login/login.jsp");
 	}
 

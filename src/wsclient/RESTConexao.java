@@ -11,8 +11,11 @@ import java.net.URLEncoder;
 import java.util.List;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RESTConexao {
 	
 	public List<?> getList(String url, String verboHTTP, Class<?> classe, Object body, Map<?,?> queryParams) {
@@ -22,6 +25,7 @@ public class RESTConexao {
 				return null;
 			else {
 				ObjectMapper objectMapper = new ObjectMapper();
+				objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 				return objectMapper.readValue(json, objectMapper .getTypeFactory().constructCollectionType(List.class, Class.forName(classe.getName())));
 			} 
 		}
@@ -38,6 +42,7 @@ public class RESTConexao {
 				return null;
 			else {
 				ObjectMapper objectMapper = new ObjectMapper();
+				objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 				return objectMapper.readValue(json, objectMapper.getTypeFactory().constructType(Class.forName(classe.getName())));
 			} 
 		}
@@ -71,6 +76,7 @@ public class RESTConexao {
 			if(body != null) {
 				con.setDoOutput(true);
 	            ObjectMapper mapper = new ObjectMapper();
+	           mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 	            String content = mapper.writeValueAsString(body);
 	            System.err.println("Json gerado");
 	            System.out.println(content);

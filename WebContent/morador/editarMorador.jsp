@@ -26,7 +26,7 @@
 			  Nome:<br>
 			  <input type="text" name="nome" class="form-control" value="<%=m.getNome() %>" >
 			  <br>
-			 <%--  CPF:<br>
+			  CPF:<br>
 			  <input type="text" name="cpf" class="form-control" value="<%=m.getCpf()%>">
 			  <br>
 			  E-mail:<br>
@@ -49,7 +49,7 @@
 			  <br>
 			  Placa do Veículo:<br>
 			  <input type="text" name="veiculo" class="form-control" value="<%=m.getPlacaVeiculo()%>"><br>
-			  <br> --%>
+			  <br>
 			  Login:<br>
 			  <input type="text" name="login" class="form-control" value="<%=m.getLogin()%>"><br>
 			  <br>
