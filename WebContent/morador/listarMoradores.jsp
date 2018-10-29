@@ -25,7 +25,7 @@
 			<h1>Moradores</h1>
 		</div>
 		<div class="col-md-6 text-right">
-			<a href="<%=request.getContextPath()%>/incluirMorador.jsp"
+			<a href="../morador/cadastroMorador.jsp"
 				class="btn btn-success">Incluir</a>
 		</div>
 		<div class="col-md-12">

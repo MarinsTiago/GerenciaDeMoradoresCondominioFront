@@ -9,9 +9,9 @@
 <title>Insert title here</title>
 </head>
 <%
-	String id = request.getParameter("id");
+	long id = Long.parseLong(request.getParameter("id"));
 	MoradorControl mc = new MoradorControl();
-	Morador m = mc.buscarPorId(Long.parseLong(id));
+	Morador m = mc.buscarPorId(id);
 
 %>
 <body>
