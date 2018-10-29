@@ -1,6 +1,6 @@
+<%@page import="model.Proprietario"%>
 <%@page import="java.util.List"%>
 <%@page import="control.ProprietarioControl"%>
-<%@page import="model.ProprietarioApartamento"%>
 <%@ include file="/estrutura/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -10,7 +10,7 @@
 </head>
 <%
 	ProprietarioControl pc = new ProprietarioControl();
-	List<ProprietarioApartamento> proprietarios = pc.listar();
+	List<Proprietario> proprietarios = pc.listar();
 %>
 <body>
 <div class="container">
@@ -30,7 +30,7 @@
 				<tbody>
 					<%
 					if(proprietarios != null)
-						for(ProprietarioApartamento proprietario : proprietarios) {
+						for(Proprietario proprietario : proprietarios) {
 					%>
 						<tr>
 							<td>

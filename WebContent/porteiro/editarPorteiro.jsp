@@ -16,12 +16,14 @@
 <body>
 <form action="../porteiro/crudPorteiro.jsp" method="POST">
 	<input type="hidden" name="acao" value="editarPorteiro">
+	<input type="hidden" name="tipoUsuario" value="porteiro"><!--Não alterar este campo-->
 	<input type="hidden" name="id" value="<%=p.getId()%>">
 	Nome:<input type="text" name="nome" value="<%=p.getNome()%>"><br>
 	CPF:<input type="text" name="cpf" value="<%=p.getCpf()%>"><br>
 	Telefone:<input type="text" name="telefone" value="<%=p.getTelefone()%>"><br>
 	Celular:<input type="text" name="celular" value="<%=p.getCelular()%>"><br>
 	E-mail:<input type="email" name="email" value="<%=p.getEmail()%>"><br>
+	Login:<input type="text" name="login" value="<%=p.getLogin()%>"><br>
 	Senha:<input type="text" name="senha" value="<%=p.getSenha()%>"><br>
 	<input type="submit" value="Cadastrar">
 	</form>

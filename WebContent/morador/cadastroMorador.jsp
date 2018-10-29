@@ -22,6 +22,7 @@
 					<span class="focus-input100"></span>				
 				</div>
 				
+				<!-- 
 				<div class="wrap-input100 validate-input" data-validate="Cpf is required">
 					<span class="label-input100">CPF</span>
 					<input class="input100" type="text" name="cpf" class="form-control" placeholder="CPF">
@@ -33,12 +34,12 @@
 					<input class="input100" type="text" name="email" placeholder="E-mail">
 					<span class="focus-input100"></span>
 				</div>
-				<!-- 
+				
 				<div class="wrap-input100 validate-input" data-validate = "number is required">
 					<span class="label-input100">N° Apartamento</span>
 					<input class="input100" type="number" name="numApart" class="form-control" placeholder="N° Apartamento">
 					<span class="focus-input100"></span>
-				</div> -->
+				</div>
 				
 				<div class="wrap-input100 ">
 					<span class="label-input100">Telefone Residencial</span>
@@ -75,7 +76,7 @@
 					<input class="input100" type="text" name="veiculo" class="form-control" placeholder="Placa do Veiculo">
 					<span class="focus-input100"></span>
 				</div>
-				
+				-->
 				<div class="wrap-input100 validate-input">
 					<span class="label-input100">Login</span>
 					<input class="input100" type="text" name="login" class="form-control" placeholder="login">
@@ -87,7 +88,7 @@
 					<input class="input100" type="password" name="senha" class="form-control" placeholder="senha">
 					<span class="focus-input100"></span>
 				</div>
-
+ 
 				<div class="container-contact100-form-btn">
 					<div class="wrap-contact100-form-btn">
 						<div class="contact100-form-bgbtn"></div>

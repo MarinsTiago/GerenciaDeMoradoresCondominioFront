@@ -12,19 +12,24 @@
 <%
 	String acao = request.getParameter("acao");
 	if(acao.equals("incluirPorteiro")){
+		
+		String tipoUsuario = request.getParameter("tipoUsuario");
 		String nome = request.getParameter("nome");
 		String cpf = request.getParameter("cpf");
 		String telefone = request.getParameter("telefone");
 		String celular = request.getParameter("celular");
 		String email = request.getParameter("email");
+		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
 		Porteiro p = new Porteiro();
+		p.setTipoUsuario(tipoUsuario);
 		p.setNome(nome);
 		p.setCpf(cpf);
 		p.setTelefone(telefone);
 		p.setCelular(celular);
 		p.setEmail(email);
+		p.setLogin(login);
 		p.setSenha(senha);
 		
 		PorteiroControl pc = new PorteiroControl();
@@ -34,20 +39,24 @@
 	}else if(acao.equals("editarPorteiro")){
 		
 		long id = Long.parseLong(request.getParameter("id"));
+		String tipoUsuario = request.getParameter("tipoUsuario");
 		String nome = request.getParameter("nome");
 		String cpf = request.getParameter("cpf");
 		String telefone = request.getParameter("telefone");
 		String celular = request.getParameter("celular");
 		String email = request.getParameter("email");
+		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
 		Porteiro p = new Porteiro();
 		p.setId(id);
+		p.setTipoUsuario(tipoUsuario);
 		p.setNome(nome);
 		p.setCpf(cpf);
 		p.setTelefone(telefone);
 		p.setCelular(celular);
 		p.setEmail(email);
+		p.setLogin(login);
 		p.setSenha(senha);
 		
 		PorteiroControl pc = new PorteiroControl();
