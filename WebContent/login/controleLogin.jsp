@@ -23,6 +23,9 @@
 		}else if(usuario.getTipoUsuario().equals("proprietario")){
 			response.sendRedirect(request.getContextPath() + "/proprietario/listarProprietario.jsp");
 			System.out.println("Foi!!");
+		}else if(usuario.getTipoUsuario().equals("adm")){
+			response.sendRedirect(request.getContextPath() + "/indexAdm.jsp");
+			System.out.println("Foi!!");
 		}
 		
 	}else{

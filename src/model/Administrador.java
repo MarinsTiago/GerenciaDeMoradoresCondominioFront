@@ -1,26 +1,15 @@
 package model;
 
 public class Administrador extends Usuario{
-
-	private long id;
 	
-	private String email;
-	
+	private String nome;
 
-	public long getId() {
-		return id;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 }

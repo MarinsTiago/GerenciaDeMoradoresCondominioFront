@@ -85,9 +85,9 @@
 		response.sendRedirect("listarMoradores.jsp");
 		
 	}else if(acao.equals("excluirMorador")){
-		String id = request.getParameter("id");
+		long id = Long.parseLong(request.getParameter("id"));
 		MoradorControl mc = new MoradorControl();
-		mc.deletar(Long.parseLong(id));
+		mc.deletar(id);
 		response.sendRedirect("listarMoradores.jsp");
 		
 	}
