@@ -47,7 +47,7 @@
 							</td>
 							<td class="mw-200">
 								<a href="editarAdm.jsp?id=<%=administrador.getId() %>"class="btn btn-primary">Editar</a>
-								<a href="crudAdm.jsp?id=<%=administrador.getId() %>&acao=excluirMorador" onclick="return confirmacaoDelecao()" class="btn btn-danger">Excluir</a>
+								<a href="crudAdmin.jsp?id=<%=administrador.getId() %>&acao=excluirMorador" onclick="return confirmacaoDelecao()" class="btn btn-danger">Excluir</a>
 							</td>
 						</tr>
 						<% } %>

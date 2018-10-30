@@ -34,7 +34,7 @@
 					%>
 						<tr>
 							<td>
-							<% out.print(proprietario.getEmail()); %>
+							<% out.print(proprietario.getNome()); %>
 							</td>
 							<td class="mw-200">
 								<a href="editarProprietario.jsp?id=<%=proprietario.getId() %>"class="btn btn-primary">Editar</a>

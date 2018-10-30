@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form action="../adm/crudAdm.jsp" method="POST">
+	<form action="../adm/crudAdmin.jsp" method="POST">
 		<input type="hidden" name="acao" value="incluirAdm">
 		<input type="hidden" name="tipoUsuario" value="adm">
 		Nome:<input type="text" name="nome"><br>

@@ -14,7 +14,7 @@
 	Administrador a = ac.buscarPorId(id);
 %>
 <body>
-<form action="../adm/crudAdm.jsp" method="POST">
+<form action="../adm/crudAdmin.jsp" method="POST">
 		<input type="hidden" name="acao" value="editarAdm">
 		<input type="hidden" name="tipoUsuario" value="adm">
 		<input type="hidden" name="id" value="<%=a.getId()%>">
