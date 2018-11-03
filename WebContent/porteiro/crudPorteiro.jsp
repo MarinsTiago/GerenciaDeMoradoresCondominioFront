@@ -1,3 +1,5 @@
+<%@page import="control.CondominioControl"%>
+<%@page import="model.Condominio"%>
 <%@page import="control.PorteiroControl"%>
 <%@page import="model.Porteiro"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -12,6 +14,11 @@
 <%
 	String acao = request.getParameter("acao");
 	if(acao.equals("incluirPorteiro")){
+		
+		CondominioControl cc = new CondominioControl();
+		long condominio = Long.parseLong(request.getParameter("condominio"));
+		
+		Condominio c = cc.buscarPorId(condominio);
 		
 		String tipoUsuario = request.getParameter("tipoUsuario");
 		String nome = request.getParameter("nome");
@@ -29,6 +36,7 @@
 		p.setTelefone(telefone);
 		p.setCelular(celular);
 		p.setEmail(email);
+		p.setCondominio(c);
 		p.setLogin(login);
 		p.setSenha(senha);
 		
@@ -37,6 +45,11 @@
 		response.sendRedirect("listarPorteiro.jsp");
 		
 	}else if(acao.equals("editarPorteiro")){
+		
+		CondominioControl cc = new CondominioControl();
+		long condominio = Long.parseLong(request.getParameter("condominio"));
+		
+		Condominio c = cc.buscarPorId(condominio);
 		
 		long id = Long.parseLong(request.getParameter("id"));
 		String tipoUsuario = request.getParameter("tipoUsuario");
@@ -56,6 +69,7 @@
 		p.setTelefone(telefone);
 		p.setCelular(celular);
 		p.setEmail(email);
+		p.setCondominio(c);
 		p.setLogin(login);
 		p.setSenha(senha);
 		

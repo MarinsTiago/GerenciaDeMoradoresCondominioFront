@@ -34,6 +34,7 @@
 					<th>CPF</th>
 					<th>Telefone</th>
 					<th>E-mail</th>
+					<th>Condomínio de Atuação</th>
 				</thead>
 				<tbody>
 					<%
@@ -52,6 +53,9 @@
 							</td>
 							<td>
 								<% out.print(porteiro.getEmail()); %>
+							</td>
+							<td>
+								<% out.print(porteiro.getCondominio().getNome()); %>
 							</td>
 							<td class="mw-200">
 								<a href="editarPorteiro.jsp?id=<%=porteiro.getId() %>"class="btn btn-primary">Editar</a>

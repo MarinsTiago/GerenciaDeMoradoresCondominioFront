@@ -1,3 +1,4 @@
+<%@page import="model.Morador"%>
 <%@page import="model.Apartamento"%>
 <%@page import="java.util.List"%>
 <%@page import="control.ApartamentoControl"%>
@@ -30,8 +31,11 @@
 		<div class="col-md-12">
 			<table class="table table-hover table-striped">
 				<thead>
-					<th>bloco</th>
-					<th>numero</th>
+					<th>Bloco</th>
+					<th>Número</th>
+					<th>Morador</th>
+					<th>Proprietario</th>
+					<th>Ocupado</th>
 				</thead>
 				<tbody>
 					<%
@@ -44,6 +48,28 @@
 						</td>
 						<td>
 							<% out.print(apartamento.getNumero());%>
+						</td>
+						<td>
+							<% 
+								if(apartamento.getMorador() == null){
+									out.print("Vazio");
+								}else{
+									out.print(apartamento.getMorador().getNome());
+								}
+							%>
+						</td>
+						<td>
+							<% out.print(apartamento.getProprietario().getNome());%>
+						</td>
+						<td>
+							<% 
+									if(apartamento.getOcupado().equals("nao")){	
+										out.print("NÃO");
+									}else if(apartamento.getOcupado().equals("sim")){
+										out.print("SIM");
+									}
+							
+							%>
 						</td>
 						<td class="mw-200">
 							<a href="editarApartamento.jsp?id=<%=apartamento.getId() %>"class="btn btn-primary">Editar</a>

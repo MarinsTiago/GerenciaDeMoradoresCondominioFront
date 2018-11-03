@@ -8,9 +8,11 @@ public class Apartamento {
 	
 	private String bloco;
 	
-	//private Morador morador;
+	private Morador morador;
 	
-	//private ProprietarioApartamento proprietario;
+	private Proprietario proprietario;
+	
+	private String ocupado;
 
 	public long getId() {
 		return id;
@@ -36,7 +38,7 @@ public class Apartamento {
 		this.bloco = bloco;
 	}
 
-	/*public Morador getMorador() {
+	public Morador getMorador() {
 		return morador;
 	}
 
@@ -44,12 +46,21 @@ public class Apartamento {
 		this.morador = morador;
 	}
 
-	public ProprietarioApartamento getProprietario() {
+	public Proprietario getProprietario() {
 		return proprietario;
 	}
 
-	public void setProprietario(ProprietarioApartamento proprietario) {
+	public void setProprietario(Proprietario proprietario) {
 		this.proprietario = proprietario;
 	}
-	*/
+
+	public String getOcupado() {
+		return ocupado;
+	}
+
+	public void setOcupado(String ocupado) {
+		this.ocupado = ocupado;
+	}
+
+
 }

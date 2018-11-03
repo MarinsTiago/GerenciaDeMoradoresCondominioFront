@@ -1,3 +1,8 @@
+<%@page import="model.Proprietario"%>
+<%@page import="model.Morador"%>
+<%@page import="java.util.List"%>
+<%@page import="control.ProprietarioControl"%>
+<%@page import="control.MoradorControl"%>
 <%@page import="model.Apartamento"%>
 <%@page import="control.ApartamentoControl"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -13,24 +18,41 @@
 	long id = Long.parseLong(request.getParameter("id"));
 	ApartamentoControl ac = new ApartamentoControl();
 	Apartamento a = ac.buscarPorId(id);
+	MoradorControl mc = new MoradorControl();
+	ProprietarioControl pc = new ProprietarioControl();
+	List<Morador> moradores = mc.listar();
+	List<Proprietario> proprietarios = pc.listar();
 %>
 <form action="../apartamento/crudApartamento.jsp" method="POST">
 		<input type="hidden" name="acao" value="editarApartamento">
 		<input type="hidden" name="id" value="<%=a.getId()%>">
-		<select>
-			<option>Selecione o morador</option>
+		<select id="morador" name="morador">
+			<option value="0">Selecione o morador</option>
+		<%
+			for(Morador m: moradores){
+				out.print("<option value='" + m.getId() + "'>"+ m.getNome() + "</option>");
+			}	
+		%>
 		</select><br>
 		
-		<select>
+		<select id="proprietario" name="proprietario">
 			<option>Selecione o proprietario</option>
+			
+			<%
+			for(Proprietario p: proprietarios){
+				out.print("<option value='" + p.getId() + "'>"+ p.getNome() + "</option>");
+			}	
+		%>
 		</select><br>
 		
 		Numero apartamento:<br><input type="number" name="numero" value="<%=a.getNumero()%>"><br>
 		
 		Bloco apartamento:<br><input type="text" name="bloco" value="<%=a.getBloco()%>"><br>
 		
+		Apartamento Ocupado?<input type="checkbox" name="ocupado" <%if(a.getOcupado().equals("sim")){ %>checked="checked" <% }%>><br>
+		
 		<input type="submit" value="Atualizar">
-	
+
 	
 	</form>
 

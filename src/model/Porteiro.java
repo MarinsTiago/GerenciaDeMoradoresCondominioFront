@@ -15,6 +15,8 @@ public class Porteiro extends Usuario{
 	private String email;
 	
 	private String senha;
+	
+	private Condominio condominio;
 
 	public long getId() {
 		return id;
@@ -70,5 +72,13 @@ public class Porteiro extends Usuario{
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public Condominio getCondominio() {
+		return condominio;
+	}
+
+	public void setCondominio(Condominio condominio) {
+		this.condominio = condominio;
 	}
 }

@@ -1,3 +1,6 @@
+<%@page import="model.Condominio"%>
+<%@page import="java.util.List"%>
+<%@page import="control.CondominioControl"%>
 <%@page import="model.Porteiro"%>
 <%@page import="control.PorteiroControl"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -12,6 +15,8 @@
 	long id = Long.parseLong(request.getParameter("id"));
 	PorteiroControl pc = new PorteiroControl();
 	Porteiro p = pc.buscarPorId(id);
+	CondominioControl cc = new CondominioControl();
+	List<Condominio> condominios = cc.listar();
 %>
 <body>
 <form action="../porteiro/crudPorteiro.jsp" method="POST">
@@ -25,6 +30,14 @@
 	E-mail:<input type="email" name="email" value="<%=p.getEmail()%>"><br>
 	Login:<input type="text" name="login" value="<%=p.getLogin()%>"><br>
 	Senha:<input type="text" name="senha" value="<%=p.getSenha()%>"><br>
+	<select id="condominio" name="condominio">
+			 <option>Selecione o Condominio</option>
+		<%
+			for(Condominio c: condominios){
+				out.print("<option value='" + c.getId() + "'>"+ c.getNome() + "</option>");
+			}	
+		%>
+	</select><br>
 	<input type="submit" value="Cadastrar">
 	</form>
 </body>
