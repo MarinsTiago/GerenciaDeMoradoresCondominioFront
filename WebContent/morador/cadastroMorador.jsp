@@ -7,92 +7,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div class="container-contact100">
+	<div class="container-contact100">
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form" method="POST" action="../morador/crudMorador.jsp">
-			<input type="hidden" name="acao" value="incluirMorador">
-			<input type="hidden" name="tipoUsuario" value="morador"><!--Não alterar este campo-->
 				<span class="contact100-form-title">
 					Cadastro Morador
 				</span>
 
-				<div class="wrap-input100 validate-input" data-validate="Name is required">
-					<span class="label-input100">Nome</span>
-					<input class="input100" type="text" name="nome" class="form-control" placeholder="Nome">
-					<span class="focus-input100"></span>				
-				</div>
 				
-				
-				<div class="wrap-input100 validate-input" data-validate="Cpf is required">
-					<span class="label-input100">CPF</span>
-					<input class="input100" type="text" name="cpf" class="form-control" placeholder="CPF">
+				<div class="wrap-input100 rs1 validate-input">
+					<input id="first-name" class="input100" type="text" name="nome" placeholder="Nome">
 					<span class="focus-input100"></span>
 				</div>
-				
-				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<span class="label-input100">Email</span>
-					<input class="input100" type="text" name="email" placeholder="E-mail">
-					<span class="focus-input100"></span>
-				</div>
-				
-				<div class="wrap-input100 ">
-					<span class="label-input100">Telefone Residencial</span>
-					<input class="input100" type="text" name="telResidencial" class="form-control" placeholder="Telefone Residencial">
-					<span class="focus-input100"></span>
-				</div>
-				
-				<div class="wrap-input100 ">
-					<span class="label-input100">Telefone Comercial</span>
-					<input class="input100" type="text" name="telComercial" class="form-control" placeholder="Telefone Comercial">
-					<span class="focus-input100"></span>
-				</div>
-				
-				<div class="wrap-input100">
-					<span class="label-input100">Celular</span>
-					<input class="input100" type="text" name="celular" class="form-control" placeholder="Celular">
+				<div class="wrap-input100 rs1 validate-input">
+					<input class="input100" type="text" name="cpf" placeholder="CPF">
 					<span class="focus-input100"></span>
 				</div>
 
-				<div class="wrap-input100 validate-input" data-validate = "number is required">
-					<span class="label-input100">Documento de propriedade</span><br>
-					<input type="radio" name="doc" value="escritura"><span class="label-input100">Escritura</span><br>
-					<input type="radio" name="doc" value="contratoCompra"><span class="label-input100">Contrato de Compra e Venda</span>
-				</div>
-				
-				<div class="wrap-input100 validate-input" data-validate = "number is required">
-					<span class="label-input100">Tipo de moradorador: </span><br>
-					<input type="radio" name="morador" value="proprietario"><span class="label-input100">Proprietario</span><br>
-					<input type="radio" name="morador" value="inquilino"><span class="label-input100">Inquilino</span>
-				</div>
-				
-				<div class="wrap-input100 validate-input" data-validate = "number is required">
-					<span class="label-input100">Veiculo</span>
-					<input class="input100" type="text" name="veiculo" class="form-control" placeholder="Placa do Veiculo">
-					<span class="focus-input100"></span>
-				</div>
 				
 				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Login</span>
-					<input class="input100" type="text" name="login" class="form-control" placeholder="login">
+					<input id="email" class="input100" type="text" name="email" placeholder="example@email.com">
 					<span class="focus-input100"></span>
 				</div>
+
 				
-				<div class="wrap-input100 validate-input" data-validate = "password is required">
-					<span class="label-input100">Senha</span>
-					<input class="input100" type="password" name="senha" class="form-control" placeholder="senha">
+				<div class="wrap-input100 rs1">
+					<input id="phone" class="input100" type="text" name="telResidencial" placeholder="TelResidencial">
 					<span class="focus-input100"></span>
 				</div>
- 
+
+				<div class="wrap-input100 rs1">
+					<input id="phone" class="input100" type="text" name="telComercial" placeholder="Telefone Comercial">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<input id="phone" class="input100" type="text" name="celular" placeholder="celular">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1">
+					<input type="radio" name="doc" value="escritura">Escritura
+					<input type="radio" name="doc" value="contratoCompra">Contrato de Compra
+				</div>
+
+				<div class="wrap-input100 rs1">
+					<input type="radio" name="morador" value="proprietario">Proprietario
+					<input type="radio" name="morador" value="inquilino">Inquilino
+				</div>
+
+				<div class="wrap-input100 rs1">
+					<input type="text" name="veiculo" class="input100" placeholder="Veiculo">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1">
+					<input type="text" name="login" class="input100" placeholder="Login">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<input type="password" name="senha" class="input100" placeholder="Senha">
+					<span class="focus-input100"></span>
+				</div>
+
 				<div class="container-contact100-form-btn">
-					<div class="wrap-contact100-form-btn">
-						<div class="contact100-form-bgbtn"></div>
-						<button class="contact100-form-btn">
-							<span>
-								Submit
-								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-							</span>
-						</button>
-					</div>
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="zmdi zmdi-arrow-right m-l-8"></i>
+						</span>
+					</button>
 				</div>
 			</form>
 		</div>
