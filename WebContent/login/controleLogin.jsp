@@ -15,13 +15,13 @@
 	if(usuario != null){
 		sessao.setAttribute("usuario", usuario);
 		if(usuario.getTipoUsuario().equals("morador")){
-			response.sendRedirect(request.getContextPath() + "/morador/listarMoradores.jsp");
+			response.sendRedirect(request.getContextPath() + "/indexMorador.jsp");
 			System.out.println("Foi!!");
 		}else if(usuario.getTipoUsuario().equals("porteiro")){
-			response.sendRedirect(request.getContextPath() + "/porteiro/listarPorteiro.jsp");
+			response.sendRedirect(request.getContextPath() + "/indexPorteiro.jsp");
 			System.out.println("Foi!!");
 		}else if(usuario.getTipoUsuario().equals("proprietario")){
-			response.sendRedirect(request.getContextPath() + "/proprietario/listarProprietario.jsp");
+			response.sendRedirect(request.getContextPath() + "/indexProprietario.jsp");
 			System.out.println("Foi!!");
 		}else if(usuario.getTipoUsuario().equals("adm")){
 			response.sendRedirect(request.getContextPath() + "/indexAdm.jsp");
