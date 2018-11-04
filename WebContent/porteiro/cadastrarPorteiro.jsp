@@ -1,8 +1,8 @@
+<%@ include file="/estrutura/header.jsp"%>
 <%@page import="model.Condominio"%>
 <%@page import="java.util.List"%>
 <%@page import="control.CondominioControl"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -16,25 +16,70 @@
 %>
 
 <body>
-	<form action="../porteiro/crudPorteiro.jsp" method="POST">
-	<input type="hidden" name="acao" value="incluirPorteiro">
-	<input type="hidden" name="tipoUsuario" value="porteiro"><!--Não alterar este campo-->
-	Nome:<input type="text" name="nome"><br>
-	CPF:<input type="text" name="cpf"><br>
-	Telefone:<input type="text" name="telefone"><br>
-	Celular:<input type="text" name="celular"><br>
-	E-mail:<input type="email" name="email"><br>
-	Login:<input type="text" name="login"><br>
-	Senha:<input type="password" name="senha"><br>
-	<select id="condominio" name="condominio">
+	<div class="container-contact100">
+	<div class="wrap-contact100">
+	<form class="contact100-form validate-form" action="../porteiro/crudPorteiro.jsp" method="POST">
+		<input type="hidden" name="acao" value="incluirPorteiro">
+		<input type="hidden" name="tipoUsuario" value="porteiro"><!--Não alterar este campo-->
+		<span class="contact100-form-title">
+					Cadastro Porteiro
+				</span>
+		<div class="wrap-input100 rs1 validate-input">
+			<input id="first-name" class="input100" type="text" name="nome" placeholder="Nome">
+			<span class="focus-input100"></span>
+		</div>
+		
+		<div class="wrap-input100 rs1 validate-input">
+			<input id="first-name" class="input100" type="text" name="cpf" placeholder="CPF">
+			<span class="focus-input100"></span>
+		</div>
+		
+		<div class="wrap-input100 rs1 validate-input">
+			<input id="first-name" class="input100" type="text" name="telefone" placeholder="Telefone">
+			<span class="focus-input100"></span>
+		</div>
+		
+		<div class="wrap-input100 rs1 validate-input">
+			<input id="first-name" class="input100" type="text" name="celular" placeholder="Celular">
+			<span class="focus-input100"></span>
+		</div>
+		
+		<div class="wrap-input100 validate-input">
+			<input id="first-name" class="input100" type="email" name="email" placeholder="E-mail">
+			<span class="focus-input100"></span>
+		</div>
+		
+		<div class="wrap-input100 rs1 validate-input">
+			<input id="first-name" class="input100" type="text" name="login" placeholder="Login">
+			<span class="focus-input100"></span>
+		</div>
+		
+		<div class="wrap-input100 rs1 validate-input">
+			<input id="first-name" class="input100" type="password" name="senha" placeholder="Senha">
+			<span class="focus-input100"></span>
+		</div>
+		
+		<select id="condominio" name="condominio">
 			 <option>Selecione o Condominio</option>
-		<%
-			for(Condominio c: condominios){
-				out.print("<option value='" + c.getId() + "'>"+ c.getNome() + "</option>");
-			}	
-		%>
-	</select><br>
-	<input type="submit" value="Cadastrar">
+			<%
+				for(Condominio c: condominios){
+					out.print("<option value='" + c.getId() + "'>"+ c.getNome() + "</option>");
+				}	
+			%>
+		</select>
+	<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="zmdi zmdi-arrow-right m-l-8"></i>
+						</span>
+					</button>
+				</div>	
 	</form>
+	</div>
+</div>
+	<div id="dropDownSelect1"></div>
+
+	<%@ include file="/estrutura/footer.jsp"%>
 </body>
 </html>

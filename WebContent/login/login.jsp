@@ -42,8 +42,14 @@
 					</div>
 
 					<div class="text-center p-t-90">
-						<a class="txt1" href="#">
-							Forgot Password?
+						<a class="txt1" href="http://localhost:8080/GerenciaDeMoradoresCondominioFront/porteiro/cadastrarPorteiro.jsp">
+							Cadastre-se Porteiro |
+						</a>
+						<a class="txt1" href="http://localhost:8080/GerenciaDeMoradoresCondominioFront/morador/cadastroMorador.jsp">
+							Cadastre-se Morador |
+						</a>
+						<a class="txt1" href="http://localhost:8080/GerenciaDeMoradoresCondominioFront/proprietario/cadastroProprietario.jsp">
+							Cadastre-se Proprietario
 						</a>
 					</div>
 				</form>
