@@ -59,7 +59,7 @@
 			<span class="focus-input100"></span>
 		</div>
 		
-		<select id="condominio" name="condominio">
+		<select class="form-control" id="condominio" name="condominio">
 			 <option>Selecione o Condominio</option>
 			<%
 				for(Condominio c: condominios){
