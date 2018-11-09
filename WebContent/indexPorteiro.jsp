@@ -1,3 +1,5 @@
+<%@page import="model.Morador"%>
+<%@page import="control.PorteiroControl"%>
 <%@page import="model.Usuario"%>
 <%@ include file="/estrutura/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -10,7 +12,6 @@
 	HttpSession sessao = request.getSession();
 	Usuario u = (Usuario) sessao.getAttribute("usuario");
 	long id = u.getId();
-	
 %>
 <body>
 
@@ -41,17 +42,82 @@
   </div>
 </nav>
 
-<div class="container" align="right">
+<div class="container">
 	<div class="col-md-6">
 		<div class="input-group h2">
-		    <input name="morador" class="form-control" id="search" type="text" placeholder="Pesquisar moradores">
+		<form action="crudPorteiro.jsp">
+			<input type="hidden" value="buscarMorador">
+		    <input name="nomeMorador" class="form-control" id="search" type="text" placeholder="Pesquisar moradores">
 		       <span class="input-group-btn">
 		           <button class="btn btn-info" type="submit">
 		               <span class="glyphicon glyphicon-search">Buscar</span>		                  
 		           </button>
 		      </span>
+		</form>      
 		</div>		        
 	</div>
+	<%
+	PorteiroControl pc = new PorteiroControl();
+	String nomeMorador = request.getParameter("nomeMorador");
+	Morador m = pc.buscarMoradorPorNome(nomeMorador);
+	 %>
+	<div class="col-md-12">
+			<table class="table table-hover table-striped">
+				<thead>
+					<th>Nome</th>
+					<th>CPF</th>
+					<th>Telefone Res</th>
+					<th>Telefone Com</th>
+					<th>Celular</th>
+					<th>Tipo de Documento</th>
+					<th>Tipo de Morador</th>
+					<th>email</th>
+					<th>Placa do veículo</th>
+				</thead>
+				<tbody>
+				
+					<%-- <%
+					if(moradores != null)
+						for(Morador morador : moradores) {
+					%> --%>
+						<tr>
+							<td>
+							<% out.print(m.getNome()); %>
+							</td>
+							<td>
+								<% out.print(m.getCpf()); %>
+							</td>
+							<td>
+								<% out.print(m.getTelefoneResidencial()); %>
+							</td>
+							<td>
+								<% out.print(m.getTelefoneComercial()); %>
+							</td>
+							<td>
+								<% out.print(m.getCelular()); %>
+							</td>
+							<td>
+								<% out.print(m.getTipoDocumento()); %>
+							</td>
+							<td>
+								<% out.print(m.getTipoMorador()); %>
+							</td>
+							<td>
+								<% out.print(m.getEmail()); %>
+							</td>
+							<td>
+								<% out.print(m.getPlacaVeiculo()); %>
+							</td>
+							<%-- <td class="mw-200">
+								<a href="editarMorador.jsp?id=<%=morador.getId() %>"class="btn btn-primary">Editar</a>
+								<a href="crudMorador.jsp?id=<%=morador.getId() %>&acao=excluirMorador" onclick="return confirmacaoDelecao()" class="btn btn-danger">Excluir</a>
+							</td> --%>
+						</tr>
+						<%-- <% } %> --%>
+					</tbody>
+				
+				</table>
+		</div>
 </div>
 </body>
 </html>

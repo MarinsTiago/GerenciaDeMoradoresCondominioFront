@@ -1,3 +1,4 @@
+<%@page import="model.Morador"%>
 <%@page import="control.CondominioControl"%>
 <%@page import="model.Condominio"%>
 <%@page import="control.PorteiroControl"%>
@@ -81,6 +82,13 @@
 		PorteiroControl pc = new PorteiroControl();
 		pc.deletar(id);
 		response.sendRedirect("listarPorteiro.jsp");
+	}else if(acao.equals("buscarMorador")){
+		
+		String nomeMorador = request.getParameter("nomeMorador");
+		PorteiroControl pc = new PorteiroControl();
+		Morador m = pc.buscarMoradorPorNome(nomeMorador);
+		response.sendRedirect("indexPorteiro.jsp");
+		
 	}
 
 %>

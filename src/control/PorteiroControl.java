@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import model.Morador;
 import model.Porteiro;
 import wsclient.RESTConexao;
 
@@ -42,5 +43,12 @@ public class PorteiroControl {
 		RESTConexao rest = new RESTConexao();
 		queryParams.put("id", id);
 		rest.getObject(url, "DELETE", null, null, queryParams);
+	}
+	public Morador buscarMoradorPorNome(String nomeMorador) {
+		String url = "http://localhost:8080/GerenciaDeMoradoresCondominioBack/api/porteiro/buscarPorNome";
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+		RESTConexao rest = new RESTConexao();
+		queryParams.put("nomeMorador", nomeMorador);
+		return (Morador) rest.getObject(url, "GET", Morador.class, null, queryParams);
 	}
 }
