@@ -34,12 +34,12 @@
 			<span class="focus-input100"></span>
 		</div>
 		
-		<div class="wrap-input100 rs1 validate-input">
+		<div class="wrap-input100 rs1">
 			<input id="first-name" class="input100" type="text" name="telefone" placeholder="Telefone">
 			<span class="focus-input100"></span>
 		</div>
 		
-		<div class="wrap-input100 rs1 validate-input">
+		<div class="wrap-input100 rs1">
 			<input id="first-name" class="input100" type="text" name="celular" placeholder="Celular">
 			<span class="focus-input100"></span>
 		</div>

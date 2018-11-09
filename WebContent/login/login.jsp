@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+		<div class="container-login100" style="background-image: url('../images/bg-01.jpg');">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" id="Login" method="POST" action="../login/controleLogin.jsp">
 					<span class="login100-form-logo">
