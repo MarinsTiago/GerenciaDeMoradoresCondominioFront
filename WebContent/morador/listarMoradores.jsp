@@ -14,8 +14,16 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <%
+	int limitePorPagina = 4;
+	int paginaAtual;
+	if (request.getParameter("pag") != null)
+		paginaAtual = Integer.parseInt(request.getParameter("pag"));
+	else
+		paginaAtual = 1;
+%>
+<%
 	MoradorControl mc = new MoradorControl();
-	List<Morador> moradores = mc.listar();
+	List<Morador> moradores = mc.listar(paginaAtual, limitePorPagina);
 %>
 <body>
 	
@@ -83,6 +91,20 @@
 					</tbody>
 				
 				</table>
+		</div>
+			<div class="col-md-12 text-center">
+
+			<button onclick="paginaAnterior()" type="button"
+				<%if (paginaAtual == 1)
+				         out.print("disabled"); %>
+				class="btn btn-lg btn-primary">Página Anterior</button>
+			<button onclick="proximaPagina()" type="button"
+				<%if (moradores == null)
+				         out.print("disabled");
+			          else if (moradores.size() == 0)
+				               out.print("disabled");%>
+				class="btn btn-secondary btn-lg">Próxima Página</button>
+
 		</div>
 	</div>
 </div>
