@@ -27,6 +27,7 @@
 %>
 <body>
 	
+	
 	<div class="container">
 	<div class="row">
 		<div class="col-md-6">
@@ -84,7 +85,13 @@
 							</td>
 							<td class="mw-200">
 								<a href="editarMorador.jsp?id=<%=morador.getId() %>"class="btn btn-primary">Editar</a>
-								<a href="crudMorador.jsp?id=<%=morador.getId() %>&acao=excluirMorador" onclick="return confirmacaoDelecao()" class="btn btn-danger">Excluir</a>
+								
+								<div id="actions" class="row">
+									<div class="col-md-12">
+										<a   href="crudMorador.jsp?id=<%=morador.getId() %>&acao=excluirMorador" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+									</div>
+								</div>
+								
 							</td>
 						</tr>
 						<% } %>
@@ -108,5 +115,25 @@
 		</div>
 	</div>
 </div>
+		<!-- modal -->
+	<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+        			
+      			</div>
+      			<div class="modal-body">
+        			Deseja realmente excluir este item?
+      			</div>
+      			<div class="modal-footer">
+        			<a onclick="return confirmacaoDelecao()" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+ 					<button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+      			</div>
+    		</div>
+  		</div>
+	</div> <!-- /.modal -->
+	
+	<%@ include file="/estrutura/footer.jsp"%>
 </body>
 </html>

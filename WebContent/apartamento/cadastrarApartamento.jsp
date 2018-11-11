@@ -13,9 +13,19 @@
 <title>Insert title here</title>
 </head>
 <%
+//setei um valor alto pois estava limitando a 
+//listagem de morador ou proprietario nos selects
+	int limitePorPagina = 400000;
+	int paginaAtual;
+	if (request.getParameter("pag") != null)
+		paginaAtual = Integer.parseInt(request.getParameter("pag"));
+	else
+		paginaAtual = 1;
+%>
+<%
 	MoradorControl mc = new MoradorControl();
 	ProprietarioControl pc = new ProprietarioControl();
-	List<Morador> moradores = mc.listar();
+	List<Morador> moradores = mc.listar(paginaAtual, limitePorPagina);
 	List<Proprietario> proprietarios = pc.listar();
 %>
 <body>

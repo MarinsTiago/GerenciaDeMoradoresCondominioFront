@@ -15,15 +15,25 @@
 </head>
 <body>
 <%
+//setei um valor alto pois estava limitando a 
+//listagem de morador ou proprietario nos selects
+	int limitePorPagina = 400000;
+	int paginaAtual;
+	if (request.getParameter("pag") != null)
+		paginaAtual = Integer.parseInt(request.getParameter("pag"));
+	else
+		paginaAtual = 1;
+%>
+<%
 	long id = Long.parseLong(request.getParameter("id"));
 	ApartamentoControl ac = new ApartamentoControl();
 	Apartamento a = ac.buscarPorId(id);
 	MoradorControl mc = new MoradorControl();
 	ProprietarioControl pc = new ProprietarioControl();
-	List<Morador> moradores = mc.listar();
+	List<Morador> moradores = mc.listar(paginaAtual, limitePorPagina);
 	List<Proprietario> proprietarios = pc.listar();
 %>
-<form action="../apartamento/crudApartamento.jsp" method="POST">
+<form action="crudApartamento.jsp" method="POST">
 		<input type="hidden" name="acao" value="editarApartamento">
 		<input type="hidden" name="id" value="<%=a.getId()%>">
 		<select id="morador" name="morador">
