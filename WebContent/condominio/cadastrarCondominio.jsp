@@ -8,7 +8,7 @@
 <body>
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form action="../condominio/crudCondominio.jsp" method="post" class="contact100-form validate-form">
+			<form action="crudCondominio.jsp" method="post" class="contact100-form validate-form">
 				<input type="hidden" name="acao" value="incluirCondominio">
 				<span class="contact100-form-title">
 					Cadastro Condominio

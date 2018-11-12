@@ -19,7 +19,7 @@
 			<h1>Adm</h1>
 		</div>
 		<div class="col-md-6 text-right">
-			<a href="../morador/cadastroAdm.jsp"
+			<a href="../adm/cadastroAdm.jsp"
 				class="btn btn-success">Incluir</a>
 		</div>
 		<div class="col-md-12">

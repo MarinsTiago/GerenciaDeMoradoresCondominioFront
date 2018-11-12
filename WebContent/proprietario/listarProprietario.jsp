@@ -9,8 +9,16 @@
 <title>Insert title here</title>
 </head>
 <%
+	int limitePorPagina = 4;
+	int paginaAtual;
+	if (request.getParameter("pag") != null)
+		paginaAtual = Integer.parseInt(request.getParameter("pag"));
+	else
+		paginaAtual = 1;
+%>
+<%
 	ProprietarioControl pc = new ProprietarioControl();
-	List<Proprietario> proprietarios = pc.listar();
+	List<Proprietario> proprietarios = pc.listar(paginaAtual, limitePorPagina);
 %>
 <body>
 <div class="container">
@@ -46,7 +54,22 @@
 				
 				</table>
 		</div>
+		<div class="col-md-12 text-center">
+
+			<button onclick="paginaAnterior()" type="button"
+				<%if (paginaAtual == 1)
+				         out.print("disabled"); %>
+				class="btn btn-lg btn-primary">Página Anterior</button>
+			<button onclick="proximaPagina()" type="button"
+				<%if (proprietarios == null)
+				         out.print("disabled");
+			          else if (proprietarios.size() == 0)
+				               out.print("disabled");%>
+				class="btn btn-secondary btn-lg">Próxima Página</button>
+
+		</div>
 	</div>
 </div>
+<%@ include file="/estrutura/footer.jsp"%>
 </body>
 </html>
