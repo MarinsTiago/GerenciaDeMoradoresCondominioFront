@@ -31,7 +31,7 @@
 	MoradorControl mc = new MoradorControl();
 	ProprietarioControl pc = new ProprietarioControl();
 	List<Morador> moradores = mc.listar(paginaAtual, limitePorPagina);
-	List<Proprietario> proprietarios = pc.listar();
+	List<Proprietario> proprietarios = pc.listar(paginaAtual, limitePorPagina);
 %>
 <form action="crudApartamento.jsp" method="POST">
 		<input type="hidden" name="acao" value="editarApartamento">

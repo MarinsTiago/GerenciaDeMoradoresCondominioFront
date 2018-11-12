@@ -26,7 +26,7 @@
 	MoradorControl mc = new MoradorControl();
 	ProprietarioControl pc = new ProprietarioControl();
 	List<Morador> moradores = mc.listar(paginaAtual, limitePorPagina);
-	List<Proprietario> proprietarios = pc.listar();
+	List<Proprietario> proprietarios = pc.listar(paginaAtual, limitePorPagina);
 %>
 <body>
 

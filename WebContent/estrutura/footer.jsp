@@ -82,51 +82,10 @@
   gtag('config', 'UA-23581568-13');
 </script>
 
-<!--INCIO PAGINA플O MORADOR  -->
-<script>
-		function proximaPagina() {
-			var results = new RegExp('[\?&]pag=([^&#]*)')
-					.exec(window.location.href);
-			var paginaAtual = 1;
-			if (results != null)
-				paginaAtual = results[1];
-			location.href = "listarMoradores.jsp?pag=" + (parseInt(paginaAtual) + 1);
-		}
 
-		function paginaAnterior() {
-			var results = new RegExp('[\?&]pag=([^&#]*)')
-					.exec(window.location.href);
-			var paginaAtual = 1;
-			if (results != null)
-				paginaAtual = results[1];
-			if (parseInt(paginaAtual) > 1)
-				location.href = "listarMoradores.jsp?pag=" + (parseInt(paginaAtual) - 1);
-		}
-</script>
-<!--FIM PAGINA플O MORADOR  -->
 
-<!-- INICIO PAGINA플O PROPRIETARIO -->	
-<script>
-		function proximaPagina() {
-			var results = new RegExp('[\?&]pag=([^&#]*)')
-					.exec(window.location.href);
-			var paginaAtual = 1;
-			if (results != null)
-				paginaAtual = results[1];
-			location.href = "listarProprietario.jsp?pag=" + (parseInt(paginaAtual) + 1);
-		}
 
-		function paginaAnterior() {
-			var results = new RegExp('[\?&]pag=([^&#]*)')
-					.exec(window.location.href);
-			var paginaAtual = 1;
-			if (results != null)
-				paginaAtual = results[1];
-			if (parseInt(paginaAtual) > 1)
-				location.href = "listarProprietario.jsp?pag=" + (parseInt(paginaAtual) - 1);
-		}
-</script>
-<!--FIM PAGINA플O PROPRIETARIO -->
+
 
 </body>
 </html>

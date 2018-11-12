@@ -112,10 +112,33 @@
 				               out.print("disabled");%>
 				class="btn btn-secondary btn-lg">Próxima Página</button>
 
-		</div>
+			</div>
 	</div>
 </div>
-		<!-- modal -->
+<!--INCIO PAGINAÇÃO MORADOR  -->
+<script>
+		function proximaPagina() {
+			var results = new RegExp('[\?&]pag=([^&#]*)')
+					.exec(window.location.href);
+			var paginaAtual = 1;
+			if (results != null)
+				paginaAtual = results[1];
+			location.href = "listarMoradores.jsp?pag=" + (parseInt(paginaAtual) + 1);
+		}
+
+		function paginaAnterior() {
+			var results = new RegExp('[\?&]pag=([^&#]*)')
+					.exec(window.location.href);
+			var paginaAtual = 1;
+			if (results != null)
+				paginaAtual = results[1];
+			if (parseInt(paginaAtual) > 1)
+				location.href = "listarMoradores.jsp?pag=" + (parseInt(paginaAtual) - 1);
+		}
+</script>
+<!--FIM PAGINAÇÃO MORADOR  -->
+	
+	<!-- modal -->
 	<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
   		<div class="modal-dialog" role="document">
     		<div class="modal-content">

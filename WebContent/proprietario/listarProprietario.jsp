@@ -70,6 +70,27 @@
 		</div>
 	</div>
 </div>
-<%@ include file="/estrutura/footer.jsp"%>
+<!-- INICIO PAGINAÇÃO PROPRIETARIO -->	
+<script>
+		function proximaPagina() {
+			var results = new RegExp('[\?&]pag=([^&#]*)')
+					.exec(window.location.href);
+			var paginaAtual = 1;
+			if (results != null)
+				paginaAtual = results[1];
+			location.href = "listarProprietario.jsp?pag=" + (parseInt(paginaAtual) + 1);
+		}
+
+		function paginaAnterior() {
+			var results = new RegExp('[\?&]pag=([^&#]*)')
+					.exec(window.location.href);
+			var paginaAtual = 1;
+			if (results != null)
+				paginaAtual = results[1];
+			if (parseInt(paginaAtual) > 1)
+				location.href = "listarProprietario.jsp?pag=" + (parseInt(paginaAtual) - 1);
+		}
+</script>
+<!--FIM PAGINAÇÃO PROPRIETARIO -->
 </body>
 </html>
