@@ -9,8 +9,16 @@
 <title>Insert title here</title>
 </head>
 <%
+	int limitePorPagina = 4;
+	int paginaAtual;
+	if (request.getParameter("pag") != null)
+		paginaAtual = Integer.parseInt(request.getParameter("pag"));
+	else
+		paginaAtual = 1;
+%>
+<%
 	AdministradorControl ac = new AdministradorControl();
-	List<Administrador> administradores = ac.listar();
+	List<Administrador> administradores = ac.listar(paginaAtual, limitePorPagina);
 %>
 <body>
 <div class="container">
@@ -53,7 +61,43 @@
 					</tbody>		
 				</table>
 		</div>
+		<div class="col-md-12 text-center">
+
+			<button onclick="paginaAnterior()" type="button"
+				<%if (paginaAtual == 1)
+				         out.print("disabled"); %>
+				class="btn btn-lg btn-primary">Página Anterior</button>
+			<button onclick="proximaPagina()" type="button"
+				<%if (administradores == null)
+				         out.print("disabled");
+			          else if (administradores.size() == 0)
+				               out.print("disabled");%>
+				class="btn btn-secondary btn-lg">Próxima Página</button>
+
+			</div>
 	</div>
 </div>
+<!--INCIO PAGINAÇÃO ADMINISTRADOR  -->
+<script>
+		function proximaPagina() {
+			var results = new RegExp('[\?&]pag=([^&#]*)')
+					.exec(window.location.href);
+			var paginaAtual = 1;
+			if (results != null)
+				paginaAtual = results[1];
+			location.href = "listarAdm.jsp?pag=" + (parseInt(paginaAtual) + 1);
+		}
+
+		function paginaAnterior() {
+			var results = new RegExp('[\?&]pag=([^&#]*)')
+					.exec(window.location.href);
+			var paginaAtual = 1;
+			if (results != null)
+				paginaAtual = results[1];
+			if (parseInt(paginaAtual) > 1)
+				location.href = "listarAdm.jsp?pag=" + (parseInt(paginaAtual) - 1);
+		}
+</script>
+<!--FIM PAGINAÇÃO ADMINISTRADOR  -->
 </body>
 </html>

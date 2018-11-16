@@ -10,8 +10,18 @@
 <title>Insert title here</title>
 </head>
 <%
+//setei um valor alto pois estava limitando a 
+//listagem de morador ou proprietario nos selects
+	int limitePorPagina = 400000;
+	int paginaAtual;
+	if (request.getParameter("pag") != null)
+		paginaAtual = Integer.parseInt(request.getParameter("pag"));
+	else
+		paginaAtual = 1;
+%>
+<%
 	CondominioControl cc = new CondominioControl();
-	List<Condominio> condominios = cc.listar();
+	List<Condominio> condominios = cc.listar(limitePorPagina, paginaAtual);
 
 %>
 
