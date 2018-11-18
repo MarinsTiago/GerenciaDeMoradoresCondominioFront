@@ -16,7 +16,7 @@
 	PorteiroControl pc = new PorteiroControl();
 	Porteiro p = pc.buscarPorId(id);
 	CondominioControl cc = new CondominioControl();
-	List<Condominio> condominios = cc.listar();
+	List<Condominio> condominios = cc.listarSemPage();
 %>
 <body>
 <form action="../porteiro/crudPorteiro.jsp" method="POST">

@@ -19,6 +19,14 @@ public class CondominioControl {
 		RESTConexao rest = new RESTConexao();
 		return (List<Condominio>) rest.getList(url, "GET", Condominio.class, null, queryParams);
 	}	
+	
+	@SuppressWarnings("unchecked")
+	public List<Condominio> listarSemPage(){
+		String url = "http://localhost:8080/GerenciaDeMoradoresCondominioBack/api/condominio/listarSemPage";
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+		RESTConexao rest = new RESTConexao();
+		return (List<Condominio>) rest.getList(url, "GET", Condominio.class, null, queryParams);
+	}	
 	public void salvarCondominio(Condominio condominio) {
 		String url = "http://localhost:8080/GerenciaDeMoradoresCondominioBack/api/condominio/inserir";
 		Map<String, Object> queryParams = new HashMap<String, Object>();

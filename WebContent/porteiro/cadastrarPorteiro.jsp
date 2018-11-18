@@ -21,8 +21,7 @@
 %>
 <%
 	CondominioControl cc = new CondominioControl();
-	List<Condominio> condominios = cc.listar(limitePorPagina, paginaAtual);
-
+	List<Condominio> condominios = cc.listarSemPage();
 %>
 
 <body>
