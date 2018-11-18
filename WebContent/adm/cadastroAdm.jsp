@@ -12,7 +12,7 @@
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form" action="../adm/crudAdmin.jsp" method="post">
 				<input type="hidden" name="acao" value="incluirAdm">
-				<input type="hidden" name="tipoUsuario" value="adm">
+				<input type="hidden" name="tipoUsuario" value="adm"> <!--NÃO ALTERAR ESTE CAMPO-->
 				<span class="contact100-form-title">Cadastro ADM</span>
 				
 				<div class="wrap-input100 validate-input">

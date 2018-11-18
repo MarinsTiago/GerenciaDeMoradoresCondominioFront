@@ -10,16 +10,6 @@
 <title>Insert title here</title>
 </head>
 <%
-//setei um valor alto pois estava limitando a 
-//listagem de morador ou proprietario nos selects
-	int limitePorPagina = 400000;
-	int paginaAtual;
-	if (request.getParameter("pag") != null)
-		paginaAtual = Integer.parseInt(request.getParameter("pag"));
-	else
-		paginaAtual = 1;
-%>
-<%
 	CondominioControl cc = new CondominioControl();
 	List<Condominio> condominios = cc.listarSemPage();
 %>
@@ -28,8 +18,8 @@
 	<div class="container-contact100">
 	<div class="wrap-contact100">
 	<form class="contact100-form validate-form" action="../porteiro/crudPorteiro.jsp" method="POST">
-		<input type="hidden" name="acao" value="incluirPorteiro">
-		<input type="hidden" name="tipoUsuario" value="porteiro"><!--Não alterar este campo-->
+		<input type="hidden" name="acao" value="incluirPorteiro"> <!--NÃO ALTERAR ESTE CAMPO-->
+		<input type="hidden" name="tipoUsuario" value="porteiro"> <!--NÃO ALTERAR ESTE CAMPO-->
 		<span class="contact100-form-title">
 					Cadastro Porteiro
 				</span>

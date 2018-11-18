@@ -21,7 +21,7 @@
 		<div class="login">
 			<form method="POST" action="crudMorador.jsp">
 			  <input type="hidden" name="acao" value="editarMorador" >
-			  <input type="hidden" name="tipoUsuario" value="morador"><!--Não alterar este campo-->
+			  <input type="hidden" name="tipoUsuario" value="morador"> <!--NÃO ALTERAR ESTE CAMPO-->
 			  <input type="hidden" name="id" value="<%=m.getId()%>">
 			  Nome:<br>
 			  <input type="text" name="nome" class="form-control" value="<%=m.getNome() %>" >

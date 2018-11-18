@@ -10,7 +10,8 @@
 	<div class="container-contact100">
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form" method="POST" action="../morador/crudMorador.jsp">
-			<input type="hidden" name="acao" value="incluirMorador">
+			<input type="hidden" name="acao" value="incluirMorador"> <!--NÃO ALTERAR ESTE CAMPO-->
+			<input type="hidden" name="tipoUsuario" value="morador"> <!--NÃO ALTERAR ESTE CAMPO-->
 				<span class="contact100-form-title">
 					Cadastro Morador
 				</span>

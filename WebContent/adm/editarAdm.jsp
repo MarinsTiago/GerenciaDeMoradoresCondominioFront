@@ -16,7 +16,7 @@
 <body>
 <form action="../adm/crudAdmin.jsp" method="POST">
 		<input type="hidden" name="acao" value="editarAdm">
-		<input type="hidden" name="tipoUsuario" value="adm">
+		<input type="hidden" name="tipoUsuario" value="adm"> <!--NÃO ALTERAR ESTE CAMPO-->
 		<input type="hidden" name="id" value="<%=a.getId()%>">
 		Nome:<input type="text" name="nome" value="<%=a.getNome()%>"><br>
 		Login:<input type="text" name="login" value="<%=a.getLogin()%>"><br>
