@@ -14,8 +14,16 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <%
+	int limitePorPagina = 4;
+	int paginaAtual;
+	if (request.getParameter("pag") != null)
+		paginaAtual = Integer.parseInt(request.getParameter("pag"));
+	else
+		paginaAtual = 1;
+%>
+<%
 	PorteiroControl pc = new PorteiroControl();
-	List<Porteiro> porteiros = pc.listar();
+	List<Porteiro> porteiros = pc.listar(paginaAtual, limitePorPagina);
 %>
 <body>
 	<div class="container">
@@ -67,8 +75,41 @@
 				
 				</table>
 		</div>
+		<div class="col-md-12 text-center">
+
+			<button onclick="paginaAnterior()" type="button"
+				<%if (paginaAtual == 1)
+				         out.print("disabled"); %>
+				class="btn btn-lg btn-primary">Página Anterior</button>
+			<button onclick="proximaPagina()" type="button"
+				<%if (porteiros == null)
+				         out.print("disabled");
+			          else if (porteiros.size() == 0)
+				               out.print("disabled");%>
+				class="btn btn-secondary btn-lg">Próxima Página</button>
+
+			</div>
 	</div>
 </div>
+<script>
+		function proximaPagina() {
+			var results = new RegExp('[\?&]pag=([^&#]*)')
+					.exec(window.location.href);
+			var paginaAtual = 1;
+			if (results != null)
+				paginaAtual = results[1];
+			location.href = "listarPorteiro.jsp?pag=" + (parseInt(paginaAtual) + 1);
+		}
 
+		function paginaAnterior() {
+			var results = new RegExp('[\?&]pag=([^&#]*)')
+					.exec(window.location.href);
+			var paginaAtual = 1;
+			if (results != null)
+				paginaAtual = results[1];
+			if (parseInt(paginaAtual) > 1)
+				location.href = "listarPorteiro.jsp?pag=" + (parseInt(paginaAtual) - 1);
+		}
+</script>
 </body>
 </html>

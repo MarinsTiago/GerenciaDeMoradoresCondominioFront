@@ -11,9 +11,11 @@ import wsclient.RESTConexao;
 public class PorteiroControl {
 
 	@SuppressWarnings("unchecked")
-	public List<Porteiro> listar(){
+	public List<Porteiro> listar(int pagina, int limitePorPagina){
 		String url = "http://localhost:8080/GerenciaDeMoradoresCondominioBack/api/porteiro/listar";
 		Map<String, Object> queryParams = new HashMap<String, Object>();
+		queryParams.put("pagina", pagina);
+		queryParams.put("limitePorPagina", limitePorPagina);
 		RESTConexao rest = new RESTConexao();
 		return (List<Porteiro>) rest.getList(url, "GET", Porteiro.class, null, queryParams);
 	}
