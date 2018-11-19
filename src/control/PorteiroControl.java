@@ -46,11 +46,11 @@ public class PorteiroControl {
 		queryParams.put("id", id);
 		rest.getObject(url, "DELETE", null, null, queryParams);
 	}
-	public Morador buscarMoradorPorNome(String nomeMorador) {
-		String url = "http://localhost:8080/GerenciaDeMoradoresCondominioBack/api/porteiro/buscarPorNome";
+	public Morador buscarMoradorPorNome(String nome) {
+		String url = "http://localhost:8080/GerenciaDeMoradoresCondominioBack/api/porteiro/filter";
 		Map<String, Object> queryParams = new HashMap<String, Object>();
 		RESTConexao rest = new RESTConexao();
-		queryParams.put("nomeMorador", nomeMorador);
-		return (Morador) rest.getObject(url, "GET", Morador.class, null, queryParams);
+		queryParams.put("nome", nome);
+		return (Morador) rest.getObject(url, "POST", Morador.class, null, queryParams);
 	}
 }

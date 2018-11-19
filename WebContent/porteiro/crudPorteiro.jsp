@@ -84,11 +84,12 @@
 		response.sendRedirect("listarPorteiro.jsp");
 	}else if(acao.equals("buscarMorador")){
 		
-		String nomeMorador = request.getParameter("nomeMorador");
+		String nome = request.getParameter("nome");
 		PorteiroControl pc = new PorteiroControl();
-		Morador m = pc.buscarMoradorPorNome(nomeMorador);
-		response.sendRedirect("indexPorteiro.jsp");
-		
+		Morador m = pc.buscarMoradorPorNome(nome);
+		if(m != null){
+			response.sendRedirect("teste.jsp");	
+		}
 	}
 
 %>
