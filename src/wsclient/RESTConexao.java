@@ -70,8 +70,8 @@ public class RESTConexao {
 			if(verboHTTP.equals("PUT"))
 				con.setRequestProperty("Accept", "application/json");
 			con.setRequestMethod(verboHTTP);
-			con.setConnectTimeout(5000);
-			con.setReadTimeout(5000);
+			con.setConnectTimeout(25000);
+			con.setReadTimeout(25000);
 			
 			if(body != null) {
 				con.setDoOutput(true);
