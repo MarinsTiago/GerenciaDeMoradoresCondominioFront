@@ -1,47 +1,65 @@
+
 <%@ include file="/estrutura/header.jsp"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
+
+<!DOCTYPE html>
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>The WebCondo</title>
+	<title>WebCondo</title>
+	
+	
+  <!--Made with love by Mutiullah Samim  -->
+   
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+ 
 </head>
 <body>
-	<div class="limiter">
-		<div class="container-login100" style="background-image: url('../images/bg-01.jpg');">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form" id="Login" method="POST" action="../login/controleLogin.jsp">
-					<span class="login100-form-logo">
-						<i class="zmdi zmdi-landscape"></i>
-					</span>
-
-					<span class="login100-form-title p-b-34 p-t-27">
-						WebCondo
-					</span>
-
+<div class="container">
+<div class="container-login100" style="background-image: url('../images/arvoore.jpg');">
+	<div class="d-flex justify-content-center h-100">
+	<form class="login100-form validate-form" id="Login" method="POST" action="../login/controleLogin.jsp">
+		<div class="card">
+			<div class="card-header">
+				<h3>WebCondo</h3>
+				</div>
+			<div class="card-body">
+				
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
 					<div class="wrap-input100 validate-input" data-validate = "insira um email válido">
-						<input id="login" class="input100" type="text" name="login" placeholder="login...">
+						<input type="text" class="form-control" placeholder="usuario">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
-
-					<div class="wrap-input80 validate-input" data-validate="Enter password">
-						<input id="senha" class="input100" type="password" name="senha" placeholder="Senha">
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
-
-					<!-- <div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						<label class="label-checkbox100" for="ckb1">
-							Remember me
-						</label>
-					</div>-->
-
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input id="senha" class="input-100" type="password" class="form-control" placeholder="Senha">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+						</div>
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
+					
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Login
 						</button>
 					</div>
-
-					<div class="text-center p-t-90">
+					
+					<div class="text-center p-t-60">
 						<a class="txt1" href="http://localhost:8080/GerenciaDeMoradoresCondominioFront/porteiro/cadastrarPorteiro.jsp">
 							Cadastre-se Porteiro |
 						</a>
@@ -52,13 +70,16 @@
 							Cadastre-se Proprietario
 						</a>
 					</div>
-				</form>
+				
+			</div>
+			<div class="card-footer">
+			<div id="dropDownSelect1"></div>
+	<%@ include file="/estrutura/footer.jsp"%>
 			</div>
 		</div>
+		</form>
 	</div>
-	
-
-	<div id="dropDownSelect1"></div>
-	<%@ include file="/estrutura/footer.jsp"%>
+	</div>
+</div>
 </body>
 </html>
