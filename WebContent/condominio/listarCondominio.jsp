@@ -26,6 +26,26 @@
 	List<Condominio> condominios = cc.listar(paginaAtual, limitePorPagina);
 %>
 <body>
+
+<!-- modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+        			
+      			</div>
+      			<div class="modal-body">
+        			Deseja realmente excluir este item?
+      			</div>
+      			<div class="modal-footer">
+        			<a href="" id="delRef" class="btn btn-danger">Excluir</a>
+ 					<button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+      			</div>
+    		</div>
+  		</div>
+	</div> <!-- /.modal -->
+
 <div class="container">
 <div class="row">
 	<div class="col-md-6">
@@ -51,7 +71,7 @@
 					</td>
 					<td class="mw-200">
 						<a href="editarCondominio.jsp?id=<%=condominio.getId() %>"class="btn btn-primary">Editar</a>
-						<a href="crudCondominio.jsp?id=<%=condominio.getId() %>&acao=excluirCondominio" onclick="return confirmacaoDelecao()" class="btn btn-danger">Excluir</a>
+						<a href="crudCondominio.jsp?id=<%=condominio.getId() %>&acao=excluirCondominio" class="btn btn-danger delBtn">Excluir</a>
 					</td>
 				</tr>
 					<% } %>

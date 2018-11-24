@@ -1,17 +1,12 @@
 <%@page import="model.Morador"%>
 <%@page import="java.util.List"%>
 <%@page import="control.MoradorControl"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ include file="/estrutura/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Listagem de moradores</title>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="<%=request.getContextPath() %>/css/estilo.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <%
 	int limitePorPagina = 4;
@@ -88,7 +83,7 @@
 								
 								<div id="actions" class="row">
 									<div class="col-md-12">
-										<a   href="crudMorador.jsp?id=<%=morador.getId() %>&acao=excluirMorador" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+										<a href="crudMorador.jsp?id=<%=morador.getId() %>&acao=excluirMorador" class="btn btn-danger delBtn">Excluir</a>
 									</div>
 								</div>
 								
@@ -136,10 +131,11 @@
 				location.href = "listarMoradores.jsp?pag=" + (parseInt(paginaAtual) - 1);
 		}
 </script>
+
 <!--FIM PAGINAÇÃO MORADOR  -->
 	
 	<!-- modal -->
-	<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
   		<div class="modal-dialog" role="document">
     		<div class="modal-content">
       			<div class="modal-header">
@@ -150,7 +146,7 @@
         			Deseja realmente excluir este item?
       			</div>
       			<div class="modal-footer">
-        			<a onclick="return confirmacaoDelecao()" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+        			<a href="" id="delRef" class="btn btn-danger">Excluir</a>
  					<button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
       			</div>
     		</div>

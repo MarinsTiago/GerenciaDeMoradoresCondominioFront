@@ -1,17 +1,12 @@
 <%@page import="model.Porteiro"%>
 <%@page import="java.util.List"%>
 <%@page import="control.PorteiroControl"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ include file="/estrutura/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Listagem de Porteiros</title>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="<%=request.getContextPath() %>/css/estilo.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <%
 	int limitePorPagina = 4;
@@ -26,6 +21,26 @@
 	List<Porteiro> porteiros = pc.listar(paginaAtual, limitePorPagina);
 %>
 <body>
+
+<!-- modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+        			
+      			</div>
+      			<div class="modal-body">
+        			Deseja realmente excluir este item?
+      			</div>
+      			<div class="modal-footer">
+        			<a href="" id="delRef" class="btn btn-danger">Excluir</a>
+ 					<button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+      			</div>
+    		</div>
+  		</div>
+	</div> <!-- /.modal -->
+
 	<div class="container">
 	<div class="row">
 		<div class="col-md-6">
@@ -67,7 +82,7 @@
 							</td>
 							<td class="mw-200">
 								<a href="editarPorteiro.jsp?id=<%=porteiro.getId() %>"class="btn btn-primary">Editar</a>
-								<a href="crudPorteiro.jsp?id=<%=porteiro.getId() %>&acao=excluirPorteiro" onclick="return confirmacaoDelecao()" class="btn btn-danger">Excluir</a>
+								<a href="crudPorteiro.jsp?id=<%=porteiro.getId() %>&acao=excluirPorteiro" class="btn btn-danger delBtn">Excluir</a>
 							</td>
 						</tr>
 						<% } %>
