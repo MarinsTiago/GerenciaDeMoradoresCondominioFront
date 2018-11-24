@@ -6,23 +6,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>WebCondo</title>
-	
-	
-  <!--Made with love by Mutiullah Samim  -->
-   
-	<!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="bootstrap.css">
- 
 </head>
 <body>
 <div class="container">
-<div class="container-login100" style="background-image: url('../images/arvoore.jpg');">
 	<div class="d-flex justify-content-center h-100">
 	<form class="login100-form validate-form" id="Login" method="POST" action="../login/controleLogin.jsp">
 		<div class="card">
@@ -78,7 +64,6 @@
 			</div>
 		</div>
 		</form>
-	</div>
 	</div>
 </div>
 </body>
