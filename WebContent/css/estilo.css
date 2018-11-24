@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('https://ru.best-wallpaper.net/wallpaper/1920x1080/1803/Netherlands-Enkhuizen-houses-lights-river-yacht-dusk_1920x1080.jpg');
+background-image: url('../images/casa.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
