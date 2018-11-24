@@ -80,13 +80,7 @@
 							</td>
 							<td class="mw-200">
 								<a href="editarMorador.jsp?id=<%=morador.getId() %>"class="btn btn-primary">Editar</a>
-								
-								<div id="actions" class="row">
-									<div class="col-md-12">
-										<a href="crudMorador.jsp?id=<%=morador.getId() %>&acao=excluirMorador" class="btn btn-danger delBtn">Excluir</a>
-									</div>
-								</div>
-								
+								<a href="crudMorador.jsp?id=<%=morador.getId() %>&acao=excluirMorador" class="btn btn-danger delBtn">Excluir</a>
 							</td>
 						</tr>
 						<% } %>

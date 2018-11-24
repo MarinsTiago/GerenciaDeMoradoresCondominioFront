@@ -21,7 +21,6 @@
 	List<Proprietario> proprietarios = pc.listar(paginaAtual, limitePorPagina);
 %>
 <body>
-
 <!-- modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
   		<div class="modal-dialog" role="document">
@@ -40,7 +39,6 @@
     		</div>
   		</div>
 	</div> <!-- /.modal -->
-
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
@@ -86,7 +84,6 @@
 			          else if (proprietarios.size() == 0)
 				               out.print("disabled");%>
 				class="btn btn-secondary btn-lg">Próxima Página</button>
-
 		</div>
 	</div>
 </div>
@@ -111,6 +108,7 @@
 				location.href = "listarProprietario.jsp?pag=" + (parseInt(paginaAtual) - 1);
 		}
 </script>
+<%@ include file="/estrutura/footer.jsp"%>
 <!--FIM PAGINAÇÃO PROPRIETARIO -->
 </body>
 </html>
