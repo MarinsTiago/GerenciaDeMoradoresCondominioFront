@@ -7,58 +7,37 @@
 </head>
 <body>
 	
+	<div class="container">
+	<div class="d-flex justify-content-center h-100">
+	<form action="../proprietario/crudProprietario.jsp" method="POST" class="contact100-form validate-form">
+		<div class="card">
+			<div align="center" class="card-header">
 	
-	<div class="container-contact100">
-		<div class="wrap-contact100">
-			<form action="../proprietario/crudProprietario.jsp" method="POST" class="contact100-form validate-form">
+	
 				<input type="hidden" name="acao" value="incluirProprietario">	
 				<input type="hidden" name="tipoUsuario" value="proprietario"><!--Não alterar este campo-->
 				
-				<span class="contact100-form-title">Cadastro Proprietario</span>
-				
-				<div class="wrap-input100 rs1 validate-input">
-					<input id="first-name" class="input100" type="text" name="nome" placeholder="Nome">
-					<span class="focus-input100"></span>
-				</div>
-				
-				<div class="wrap-input100 rs1 validate-input">
-					<input id="first-name" class="input100" type="text" name="cpf" placeholder="CPF">
-					<span class="focus-input100"></span>
-				</div>
-				
-				<div class="wrap-input100 validate-input">
-					<input id="first-name" class="input100" type="email" name="email" placeholder="E-mail">
-					<span class="focus-input100"></span>
-				</div>
-				
-				<div class="wrap-input100 rs1">
-					<input id="first-name" class="input100" type="text" name="telefone" placeholder="Telefone">
-					<span class="focus-input100"></span>
-				</div>
-		
-				<div class="wrap-input100 rs1">
-					<input id="first-name" class="input100" type="text" name="celular" placeholder="Celular">
-					<span class="focus-input100"></span>
-				</div>
-				
-				<div class="wrap-input100 rs1 validate-input">
-					<input id="first-name" class="input100" type="text" name="login" placeholder="Login">
-					<span class="focus-input100"></span>
-				</div>
-		
-				<div class="wrap-input100 rs1 validate-input">
-					<input id="first-name" class="input100" type="password" name="senha" placeholder="Senha">
-					<span class="focus-input100"></span>
-				</div>
-				
-				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
+				<span class="contact100-form-title"><h3>Cadastro Proprietário</h3></span>
+			</div>
+			<div class="card-body" align="center">
+				<div class="wrap-input100 rs1 validate-input">				
+				<div class="form-container">
+  <span class="input-label">First Name:</span><input type="text"  placeholder="First name" name="first_name" required> <br>
+  <span class="input-label">Last Name:</span><input type="text" name="last_name"  placeholder="Last Name" required> <br>
+  <span class="input-label">Account Number:</span><input type="text" name="number"  placeholder="account number" onkeypress="return justNumber(event)" required> <br>
+  <span class="input-label">Security Number:</span><input type="text" name="security_number"  placeholder="security number" onkeypress="return justNumber(event)" required>
+</div>
+					
+						<button class="contact100-form-btn">
 						<span>
 							Submit
 							<i class="zmdi zmdi-arrow-right m-l-8"></i>
 						</span>
 					</button>
 				</div>
+				</div>
+				</div>
+				
 			</form>
 		</div>
 	</div>
