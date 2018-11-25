@@ -6,27 +6,29 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container-contact100">
-		<div class="wrap-contact100">
-			<form action="../condominio/crudCondominio.jsp" method="post" class="contact100-form validate-form">
+	
+	<div class="container">
+	<div class="d-flex justify-content-center h-100">
+	<form action="../condominio/crudCondominio.jsp" method="post" class="contact100-form validate-form">
 				<input type="hidden" name="acao" value="incluirCondominio">
-				<span class="contact100-form-title">
-					Cadastro Condominio
-				</span>
+		<div class="card5">
+			<div align="center" class="card-header">
+	
+				<span class="contact100-form-title"><h3>Cadastro Condomínio</h3></span>
+			</div>
+			<div class="card-body2" align="center">
+				<div class="wrap-input100 rs1 validate-input">				
+				<div class="form-container">
 				
-				<div class="wrap-input100 validate-input">
-					<input id="first-name" class="input100" type="text" name="nome" placeholder="Nome">
-					<span class="focus-input100"></span>
+				<span class="input-label"><h5>Nome:</h5></span><input type="text"  placeholder="Nome" name="name" required> <br>
 				</div>
-				
-				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
-						<span>
+				</div>
+				</div>
+				<div align="center" class="container-contact100-form-btn">
+						<button style="background-color: #00BFFF"  class="contact100-form-btn">
 							Submit
-							<i class="zmdi zmdi-arrow-right m-l-8"></i>
-						</span>
-					</button>
-				</div>
+						</button>
+					</div>
 			</form>
 		</div>
 	</div>

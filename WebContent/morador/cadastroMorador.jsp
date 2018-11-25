@@ -7,80 +7,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="container-contact100">
-		<div class="wrap-contact100">
-			<form class="contact100-form validate-form" method="POST" action="../morador/crudMorador.jsp">
-			<input type="hidden" name="acao" value="incluirMorador"> <!--NÃO ALTERAR ESTE CAMPO-->
-			<input type="hidden" name="tipoUsuario" value="morador"> <!--NÃO ALTERAR ESTE CAMPO-->
-				<span class="contact100-form-title">
-					Cadastro Morador
-				</span>
-
+	
+	<div class="container">
+	<div class="d-flex justify-content-center h-100">
+	<form action="../proprietario/crudProprietario.jsp" method="POST" class="contact100-form validate-form">
+		<div class="card3">
+			<div align="center" class="card-header">
+	
+	
+				<input type="hidden" name="acao" value="incluirProprietario">	
+				<input type="hidden" name="tipoUsuario" value="proprietario"><!--Não alterar este campo-->
 				
-				<div class="wrap-input100 rs1 validate-input">
-					<input id="first-name" class="input100" type="text" name="nome" placeholder="Nome">
-					<span class="focus-input100"></span>
+				<span class="contact100-form-title"><h3>Cadastro Morador</h3></span>
+			</div>
+			<div class="card-body2" align="center">
+				<div class="wrap-input100 rs1 validate-input">				
+				<div class="form-container">
+  <span class="input-label"><h5>Nome:</h5></span><input type="text"  placeholder="Nome" name="first_name" required> <br>
+  <span class="input-label"><h5>CPF:</h5></span><input type="text" name="cpf"  placeholder="CPF" onkeypress="return justNumber(event)" required> <br>
+  <span class="input-label"><h5>Email:</h5></span><input type="text" name="email"  placeholder="Email"  required> <br>
+  <span class="input-label"><h5>Veiculo:</h5></span><input type="text" name="Veiculo"  placeholder="veiculo"  required> <br>
+  <span class="input-label"><h5>Telefone:</h5></span><input type="text" name="telefone"  placeholder="Telefone" onkeypress="return justNumber(event)" required>
+  <span class="input-label"><h5>Celular:</h5></span><input type="text" name="celular"  placeholder="Celular" onkeypress="return justNumber(event)" required> <br>
+  <span class="input-label"><h5>Login:</h5></span><input type="text" name="Login"  placeholder="Login"  required> <br>
+  <span class="input-label"><h5>Senha:</h5></span><input type="text" name="Senha"  placeholder="Senha"  required> <br>
+  <span class="input-label2"><h5>Escritura</h5></span><input type="radio" name="doc" value="escritura">
+  <span class="input-label2"><h5>Contrato de compra</h5></span><input type="radio" name="doc" value="contratoCompra">
+  <span class="input-label2"><h5>Inquilino</h5></span><input type="radio" name="morador" value="inquilino">
+  <span class="input-label2"><h5>Proprietario</h5></span><input type="radio" name="morador" value="proprietario">
+</div>		
 				</div>
-				<div class="wrap-input100 rs1 validate-input">
-					<input class="input100" type="text" name="cpf" placeholder="CPF">
-					<span class="focus-input100"></span>
+			
 				</div>
-
-				
-				<div class="wrap-input100 validate-input">
-					<input id="email" class="input100" type="text" name="email" placeholder="example@email.com">
-					<span class="focus-input100"></span>
-				</div>
-
-				
-				<div class="wrap-input100 rs1">
-					<input id="phone" class="input100" type="text" name="telResidencial" placeholder="TelResidencial">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 rs1">
-					<input id="phone" class="input100" type="text" name="telComercial" placeholder="Telefone Comercial">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100">
-					<input id="phone" class="input100" type="text" name="celular" placeholder="celular">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 rs1">
-					<input type="radio" name="doc" value="escritura">Escritura
-					<input type="radio" name="doc" value="contratoCompra">Contrato de Compra
-				</div>
-
-				<div class="wrap-input100 rs1">
-					<input type="radio" name="morador" value="proprietario">Proprietario
-					<input type="radio" name="morador" value="inquilino">Inquilino
-				</div>
-
-				<div class="wrap-input100 rs1">
-					<input type="text" name="veiculo" class="input100" placeholder="Veiculo">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 rs1">
-					<input type="text" name="login" class="input100" placeholder="Login">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100">
-					<input type="password" name="senha" class="input100" placeholder="Senha">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
-						<span>
+					<div align="center" class="container-contact100-form-btn">
+						<button style="background-color: #00BFFF"  class="contact100-form-btn">
 							Submit
-							<i class="zmdi zmdi-arrow-right m-l-8"></i>
-						</span>
-					</button>
-				</div>
+						</button>
+					</div>
 			</form>
 		</div>
 	</div>

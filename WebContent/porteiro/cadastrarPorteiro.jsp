@@ -15,65 +15,41 @@
 %>
 
 <body>
-	<div class="container-contact100">
-	<div class="wrap-contact100">
-	<form class="contact100-form validate-form" action="../porteiro/crudPorteiro.jsp" method="POST">
+	<div class="container">
+	<div class="d-flex justify-content-center h-100">
+	<form action="../porteiro/crudPorteiro.jsp" method="POST" class="contact100-form validate-form">
 		<input type="hidden" name="acao" value="incluirPorteiro"> <!--NÃO ALTERAR ESTE CAMPO-->
 		<input type="hidden" name="tipoUsuario" value="porteiro"> <!--NÃO ALTERAR ESTE CAMPO-->
-		<span class="contact100-form-title">
-					Cadastro Porteiro
-				</span>
-		<div class="wrap-input100 rs1 validate-input">
-			<input id="first-name" class="input100" type="text" name="nome" placeholder="Nome">
-			<span class="focus-input100"></span>
+		<div class="card2">
+			<div align="center" class="card-header">
+	
+	
+				<input type="hidden" name="acao" value="incluirProprietario">	
+				<input type="hidden" name="tipoUsuario" value="proprietario"><!--Não alterar este campo-->
+				
+				<span class="contact100-form-title"><h3>Cadastro Porteiro</h3></span>
+			</div>
+			<div class="card-body2" align="center">
+				<div class="wrap-input100 rs1 validate-input">				
+				<div class="form-container">
+  <span class="input-label"><h5>Nome:</h5></span><input type="text"  placeholder="Nome" name="first_name" required> <br>
+  <span class="input-label"><h5>CPF:</h5></span><input type="text" name="cpf"  placeholder="CPF" onkeypress="return justNumber(event)" required> <br>
+  <span class="input-label"><h5>Email:</h5></span><input type="text" name="email"  placeholder="Email"  required> <br>
+  <span class="input-label"><h5>Telefone:</h5></span><input type="text" name="telefone"  placeholder="Telefone" onkeypress="return justNumber(event)" required>
+  <span class="input-label"><h5>Celular:</h5></span><input type="text" name="celular"  placeholder="Celular" onkeypress="return justNumber(event)" required> <br>
+  <span class="input-label"><h5>Login:</h5></span><input type="text" name="Login"  placeholder="Login"  required> <br>
+  <span class="input-label"><h5>Senha:</h5></span><input type="text" name="Senha"  placeholder="Senha"  required> <br>
+  
+</div>
+
+
 		</div>
-		
-		<div class="wrap-input100 rs1 validate-input">
-			<input id="first-name" class="input100" type="text" name="cpf" placeholder="CPF">
-			<span class="focus-input100"></span>
 		</div>
-		
-		<div class="wrap-input100 rs1">
-			<input id="first-name" class="input100" type="text" name="telefone" placeholder="Telefone">
-			<span class="focus-input100"></span>
+	<div align="center" class="container-contact100-form-btn">
+			<button style="background-color: #00BFFF"  class="contact100-form-btn">
+				Submit
+				</button>
 		</div>
-		
-		<div class="wrap-input100 rs1">
-			<input id="first-name" class="input100" type="text" name="celular" placeholder="Celular">
-			<span class="focus-input100"></span>
-		</div>
-		
-		<div class="wrap-input100 validate-input">
-			<input id="first-name" class="input100" type="email" name="email" placeholder="E-mail">
-			<span class="focus-input100"></span>
-		</div>
-		
-		<div class="wrap-input100 rs1 validate-input">
-			<input id="first-name" class="input100" type="text" name="login" placeholder="Login">
-			<span class="focus-input100"></span>
-		</div>
-		
-		<div class="wrap-input100 rs1 validate-input">
-			<input id="first-name" class="input100" type="password" name="senha" placeholder="Senha">
-			<span class="focus-input100"></span>
-		</div>
-		
-		<select class="form-control" id="condominio" name="condominio">
-			 <option>Selecione o Condominio</option>
-			<%
-				for(Condominio c: condominios){
-					out.print("<option value='" + c.getId() + "'>"+ c.getNome() + "</option>");
-				}	
-			%>
-		</select>
-	<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
-						<span>
-							Submit
-							<i class="zmdi zmdi-arrow-right m-l-8"></i>
-						</span>
-					</button>
-				</div>	
 	</form>
 	</div>
 </div>
