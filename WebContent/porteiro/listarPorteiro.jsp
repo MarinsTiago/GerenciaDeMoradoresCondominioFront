@@ -61,8 +61,8 @@
 								<% out.print(porteiro.getCondominio().getNome()); %>
 							</td>
 							<td class="mw-200">
-								<a href="editarPorteiro.jsp?id=<%=porteiro.getId() %>"class="btn btn-primary">Editar</a>
-								<a href="crudPorteiro.jsp?id=<%=porteiro.getId() %>&acao=excluirPorteiro" class="btn btn-danger delBtn">Excluir</a>
+								<a href="editarPorteiro.jsp?id=<%=porteiro.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+								<a href="crudPorteiro.jsp?id=<%=porteiro.getId() %>&acao=excluirPorteiro" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 							</td>
 						</tr>
 						<% } %>

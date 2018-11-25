@@ -65,8 +65,8 @@
 						<% out.print(condominio.getNome());%>
 					</td>
 					<td class="mw-200">
-						<a href="editarCondominio.jsp?id=<%=condominio.getId() %>"class="btn btn-primary">Editar</a>
-						<a href="crudCondominio.jsp?id=<%=condominio.getId() %>&acao=excluirCondominio" class="btn btn-danger delBtn">Excluir</a>
+						<a href="editarCondominio.jsp?id=<%=condominio.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+						<a href="crudCondominio.jsp?id=<%=condominio.getId() %>&acao=excluirCondominio" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 					</td>
 				</tr>
 					<% } %>

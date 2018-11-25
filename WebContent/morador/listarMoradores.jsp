@@ -27,10 +27,8 @@
 	<div class="row">
 		<div class="col-md-6">
 			<h1>Moradores</h1>
-		</div>
-		<div class="col-md-6 text-right">
 			<a href="../morador/cadastroMorador.jsp"
-				class="btn btn-success">Incluir</a>
+				class="btn btn-info"><span class="glyphicon glyphicon-plus" aria-hidden="true">Incluir</a>
 		</div>
 		<div class="col-md-12">
 			<table class="table table-hover table-striped">
@@ -78,9 +76,9 @@
 							<td>
 								<% out.print(morador.getPlacaVeiculo()); %>
 							</td>
-							<td class="mw-200">
-								<a href="editarMorador.jsp?id=<%=morador.getId() %>"class="btn btn-primary">Editar</a>
-								<a href="crudMorador.jsp?id=<%=morador.getId() %>&acao=excluirMorador" class="btn btn-danger delBtn">Excluir</a>
+							<td width="180">
+								<a id="btns" href="editarMorador.jsp?id=<%=morador.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+								<a id="btns" href="crudMorador.jsp?id=<%=morador.getId() %>&acao=excluirMorador" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 							</td>
 						</tr>
 						<% } %>

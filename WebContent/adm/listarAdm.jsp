@@ -73,8 +73,8 @@
 								<% out.print(administrador.getSenha()); %>
 							</td>
 							<td class="mw-200">
-								<a href="editarAdm.jsp?id=<%=administrador.getId() %>"class="btn btn-primary">Editar</a>
-								<a href="crudAdmin.jsp?id=<%=administrador.getId() %>&acao=excluirAdm" class="btn btn-danger delBtn">Excluir</a>
+								<a href="editarAdm.jsp?id=<%=administrador.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+								<a href="crudAdmin.jsp?id=<%=administrador.getId() %>&acao=excluirAdm" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 							</td>
 						</tr>
 						<% } %>

@@ -26,7 +26,7 @@
 		
 		AdministradorControl ac = new AdministradorControl();
 		ac.salvarAdministrador(adm);
-		response.sendRedirect("indexAdm.jsp");
+		response.sendRedirect("listarAdm.jsp");
 		
 	}else if(acao.equals("editarAdm")){
 		long id = Long.parseLong(request.getParameter("id"));

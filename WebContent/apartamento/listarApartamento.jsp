@@ -59,6 +59,7 @@
 					<th>Morador</th>
 					<th>Proprietario</th>
 					<th>Ocupado</th>
+					<td>Ações</td>
 				</thead>
 				<tbody>
 					<%
@@ -95,8 +96,8 @@
 							%>
 						</td>
 						<td class="mw-200">
-							<a href="editarApartamento.jsp?id=<%=apartamento.getId() %>"class="btn btn-primary">Editar</a>
-							<a href="crudApartamento.jsp?id=<%=apartamento.getId() %>&acao=excluirApartamento"  class="btn btn-danger delBtn">Excluir</a>
+							<a href="editarApartamento.jsp?id=<%=apartamento.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+							<a href="crudApartamento.jsp?id=<%=apartamento.getId() %>&acao=excluirApartamento"  class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 						</td>
 					</tr>
 						<% } %>

@@ -85,3 +85,7 @@ color: white;
 .links a{
 margin-left: 4px;
 }
+#btns{
+	width: 40px;
+	text-align: center;
+}

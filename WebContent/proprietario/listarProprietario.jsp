@@ -63,8 +63,8 @@
 							<% out.print(proprietario.getNome()); %>
 							</td>
 							<td class="mw-200">
-								<a href="editarProprietario.jsp?id=<%=proprietario.getId() %>"class="btn btn-primary">Editar</a>
-								<a href="crudProprietario.jsp?id=<%=proprietario.getId() %>&acao=excluirProprietario" class="btn btn-danger delBtn">Excluir</a>
+								<a href="editarProprietario.jsp?id=<%=proprietario.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+								<a href="crudProprietario.jsp?id=<%=proprietario.getId() %>&acao=excluirProprietario" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 							</td>
 						</tr>
 						<% } %>
