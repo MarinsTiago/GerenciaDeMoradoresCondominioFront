@@ -53,6 +53,14 @@ width: 400px;
 background-color: rgba(0,0,0,0.5) !important;
 }
 
+.card6{
+height: 600px;
+margin-top: auto;
+margin-bottom: auto;
+width: 50px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
 .social_icon span{
 font-size: 60px;
 margin-left: 10px;
@@ -65,6 +73,10 @@ cursor: pointer;
 }
 
 .card-header h3{
+color: white;
+}
+
+.card-header h1{
 color: white;
 }
 
@@ -148,7 +160,13 @@ color: white;
 	margin-top: 20px;
 }
 
-
+.card-body3{
+	text-align: center;
+	align-content: center;
+	color: white;
+	margin-right: 100px;
+	margin-top: 50px;
+}
 
 
 .form-container span.input-label{

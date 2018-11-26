@@ -23,14 +23,14 @@
 			<div class="card-body2" align="center">
 				<div class="wrap-input100 rs1 validate-input">				
 				<div class="form-container">
-  <span class="input-label"><h5>Nome:</h5></span><input type="text"  placeholder="Nome" name="first_name" required> <br>
-  <span class="input-label"><h5>CPF:</h5></span><input type="text" name="cpf"  placeholder="CPF" onkeypress="return justNumber(event)" required> <br>
-  <span class="input-label"><h5>Email:</h5></span><input type="text" name="email"  placeholder="Email"  required> <br>
-  <span class="input-label"><h5>Veiculo:</h5></span><input type="text" name="Veiculo"  placeholder="veiculo"  required> <br>
-  <span class="input-label"><h5>Telefone:</h5></span><input type="text" name="telefone"  placeholder="Telefone" onkeypress="return justNumber(event)" required>
-  <span class="input-label"><h5>Celular:</h5></span><input type="text" name="celular"  placeholder="Celular" onkeypress="return justNumber(event)" required> <br>
-  <span class="input-label"><h5>Login:</h5></span><input type="text" name="Login"  placeholder="Login"  required> <br>
-  <span class="input-label"><h5>Senha:</h5></span><input type="text" name="Senha"  placeholder="Senha"  required> <br>
+  <span class="input-label"><h5>Nome:</h5></span><input type="text"   name="first_name" required> <br>
+  <span class="input-label"><h5>CPF:</h5></span><input type="text" name="cpf"   onkeypress="return justNumber(event)" required> <br>
+  <span class="input-label"><h5>Email:</h5></span><input type="text" name="email"   required> <br>
+  <span class="input-label"><h5>Veiculo:</h5></span><input type="text" name="Veiculo"   required> <br>
+  <span class="input-label"><h5>Telefone:</h5></span><input type="text" name="telefone"   onkeypress="return justNumber(event)" required>
+  <span class="input-label"><h5>Celular:</h5></span><input type="text" name="celular"   onkeypress="return justNumber(event)" required> <br>
+  <span class="input-label"><h5>Login:</h5></span><input type="text" name="Login"    required> <br>
+  <span class="input-label"><h5>Senha:</h5></span><input type="text" name="Senha"   required> <br>
   <span class="input-label2"><h5>Escritura</h5></span><input type="radio" name="doc" value="escritura">
   <span class="input-label2"><h5>Contrato de compra</h5></span><input type="radio" name="doc" value="contratoCompra">
   <span class="input-label2"><h5>Inquilino</h5></span><input type="radio" name="morador" value="inquilino">

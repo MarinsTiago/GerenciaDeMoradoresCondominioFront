@@ -24,14 +24,21 @@
 	
 	
 <div class="container">
+<div class="card6">
+			
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-lg">
+		<div align="left" class="card-header" style="color: white">
+	
 			<h1>Moradores</h1>
-			<a href="../morador/cadastroMorador.jsp"
-				class="btn btn-info"><span class="glyphicon glyphicon-plus" aria-hidden="true">Incluir</a>
+			<a href="../morador/cadastroMorador.jsp" class="btn btn-info">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</a>
 		</div>
+		
 		<div class="col-md-12">
-			<table class="table table-hover table-striped">
+			<div class="card-body3" align="center" >
+			<table class="table table-hover table-striped" style="color: white">
 				<thead>
 					<th>Nome</th>
 					<th>CPF</th>
@@ -40,7 +47,7 @@
 					<th>Celular</th>
 					<th>Tipo de Documento</th>
 					<th>Tipo de Morador</th>
-					<th>email</th>
+					<th>Email</th>
 					<th>Placa do veículo</th>
 				</thead>
 				<tbody>
@@ -100,7 +107,10 @@
 				class="btn btn-secondary btn-lg">Próxima Página</button>
 
 			</div>
+			</div>
 	</div>
+	</div>
+</div>
 </div>
 <!--INCIO PAGINAÇÃO MORADOR  -->
 <script>
