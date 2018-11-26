@@ -54,11 +54,12 @@ background-color: rgba(0,0,0,0.5) !important;
 }
 
 .card6{
-height: 600px;
+height: 500px;
 margin-top: auto;
 margin-bottom: auto;
-width: 50px;
+width: 600px;
 background-color: rgba(0,0,0,0.5) !important;
+
 }
 
 .social_icon span{
@@ -78,6 +79,11 @@ color: white;
 
 .card-header h1{
 color: white;
+
+}
+
+.card-header{
+	color: white;
 }
 
 .social_icon{
@@ -161,6 +167,14 @@ color: white;
 }
 
 .card-body3{
+	text-align: center;
+	align-content: center;
+	color: white;
+	margin-right: 200px;
+	margin-top: 30px;
+}
+
+.card-body4{
 	text-align: center;
 	align-content: center;
 	color: white;

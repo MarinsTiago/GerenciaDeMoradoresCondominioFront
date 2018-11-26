@@ -38,18 +38,24 @@
       			</div>
     		</div>
   		</div>
-	</div> <!-- /.modal -->
+	</div>
+	
+<!-- /.modal -->
 <div class="container">
+<div class="card6">
 	<div class="row">
-		<div class="col-md-6">
-			<h1>Proprietarios</h1>
+		<div class="col-lg">
+			<div align="left" class="card-header" style="color: white">
+			<h1>Proprietários</h1>
+			<a href="../proprietario/cadastroProprietario.jsp" class="btn btn-info">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</a>
+			</div>
 		</div>
-		<div class="col-md-6 text-right">
-			<a href="../proprietario/cadastroProprietario.jsp"
-				class="btn btn-success">Incluir</a>
-		</div>
-		<div class="col-md-12">
-			<table class="table table-hover table-striped">
+		
+		<div class="col-md">
+		<div class="card-body4" align="center" >
+			<table class="table table-hover table-striped" style="color: white">
 				<thead>
 					<th>Login</th>
 				</thead>
@@ -62,15 +68,16 @@
 							<td>
 							<% out.print(proprietario.getNome()); %>
 							</td>
-							<td class="mw-200">
-								<a href="editarProprietario.jsp?id=<%=proprietario.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-								<a href="crudProprietario.jsp?id=<%=proprietario.getId() %>&acao=excluirProprietario" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+							<td width="180">
+								<a id="btns" href="editarProprietario.jsp?id=<%=proprietario.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+								<a id="btns" href="crudProprietario.jsp?id=<%=proprietario.getId() %>&acao=excluirProprietario" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 							</td>
 						</tr>
 						<% } %>
 					</tbody>
 				
 				</table>
+				</div>
 		</div>
 		<div class="col-md-12 text-center">
 
@@ -85,6 +92,7 @@
 				               out.print("disabled");%>
 				class="btn btn-secondary btn-lg">Próxima Página</button>
 		</div>
+	</div>
 	</div>
 </div>
 <!-- INICIO PAGINAÇÃO PROPRIETARIO -->	

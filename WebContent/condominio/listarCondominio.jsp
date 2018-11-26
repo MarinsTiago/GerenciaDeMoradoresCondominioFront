@@ -41,17 +41,22 @@
   		</div>
 	</div> <!-- /.modal -->
 
+
+<!-- pagina -->
 <div class="container">
+<div class="card6">
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-lg">
+	<div align="left" class="card-header" style="color: white">
+	
 		<h1>Condominios</h1>
-	</div>
-	<div class="col-md-6 text-right">
-		<a href="../condominio/cadastrarCondominio.jsp"
-			class="btn btn-success">Incluir</a>
-	</div>
-	<div class="col-md-12">
-		<table class="table table-hover table-striped">
+	<a href="../condominio/cadastrarCondominio.jsp" class="btn btn-info">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</a>
+		</div>
+	<div class="col-md">
+		<div class="card-body3" align="center" >
+			<table class="table table-hover table-striped" style="color: white">
 			<thead>
 				<th>Nome</th>
 			</thead>
@@ -64,15 +69,16 @@
 					<td>
 						<% out.print(condominio.getNome());%>
 					</td>
-					<td class="mw-200">
-						<a href="editarCondominio.jsp?id=<%=condominio.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-						<a href="crudCondominio.jsp?id=<%=condominio.getId() %>&acao=excluirCondominio" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-					</td>
+					<td width="180">
+								<a id="btns" href="editarCondominio.jsp?id=<%=condominio.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+								<a id="btns" href="crudCondominio.jsp?id=<%=condominio.getId() %>&acao=excluirCondominio" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+							</td>
 				</tr>
 					<% } %>
 				</tbody>
 			
 			</table>
+			</div>
 	</div>
 	<div class="col-md-12 text-center">
 
@@ -88,6 +94,8 @@
 				class="btn btn-secondary btn-lg">Próxima Página</button>
 
 	</div>
+	</div>
+</div>
 </div>
 </div>
 <script>

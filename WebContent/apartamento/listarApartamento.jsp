@@ -43,16 +43,19 @@
 	</div> <!-- /.modal -->
 
 <div class="container">
+<div class="card6">
+
 	<div class="row">
 		<div class="col-md-6">
+		<div align="left" class="card-header">
 			<h1>Apartamentos</h1>
+		<a href="../apartamento/cadastrarApartamento.jsp" class="btn btn-info">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</a>
 		</div>
-		<div class="col-md-6 text-right">
-			<a href="../apartamento/cadastrarApartamento.jsp"
-				class="btn btn-success">Incluir</a>
-		</div>
-		<div class="col-md-12">
-			<table class="table table-hover table-striped">
+		<div class="col-md">
+		<div class="card-body3" align="center" >
+			<table class="table table-hover table-striped" style="color: white">
 				<thead>
 					<th>Bloco</th>
 					<th>Número</th>
@@ -95,15 +98,16 @@
 							
 							%>
 						</td>
-						<td class="mw-200">
-							<a href="editarApartamento.jsp?id=<%=apartamento.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-							<a href="crudApartamento.jsp?id=<%=apartamento.getId() %>&acao=excluirApartamento"  class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-						</td>
+						<td width="180">
+								<a id="btns" href="editarApartamento.jsp?id=<%=apartamento.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+								<a id="btns" href="crudApartamento.jsp?id=<%=apartamento.getId() %>&acao=excluirApartamento" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+							</td>
 					</tr>
 						<% } %>
 					</tbody>
 				
 				</table>
+				</div>
 		</div>
 		<div class="col-md-12 text-center">
 
@@ -119,6 +123,8 @@
 				class="btn btn-secondary btn-lg">Próxima Página</button>
 
 			</div>
+	</div>
+	</div>
 	</div>
 </div>
 <!-- INICIO PAGINAÇÃO APARTAMENTO -->

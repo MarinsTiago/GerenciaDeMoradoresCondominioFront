@@ -40,18 +40,24 @@
     		</div>
   		</div>
 	</div> <!-- /.modal -->
+	
+
+<!--  classe -->
 
 <div class="container">
+<div class="card6">
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-lg" >
+		<div class="card-header">
 			<h1>Adm</h1>
+		<a href="../adm/cadastroAdm.jsp" class="btn btn-info">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</a>
 		</div>
-		<div class="col-md-6 text-right">
-			<a href="../adm/cadastroAdm.jsp"
-				class="btn btn-success">Incluir</a>
 		</div>
-		<div class="col-md-12">
-			<table class="table table-hover table-striped">
+		<div class="col-md">
+		<div class="card-body3" align="center" >
+			<table class="table table-hover table-striped" style= "color: white">
 				<thead>
 					<th>Nome</th>
 					<th>Login</th>
@@ -72,14 +78,15 @@
 							<td>
 								<% out.print(administrador.getSenha()); %>
 							</td>
-							<td class="mw-200">
-								<a href="editarAdm.jsp?id=<%=administrador.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-								<a href="crudAdmin.jsp?id=<%=administrador.getId() %>&acao=excluirAdm" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+							<td width="180">
+								<a id="btns" href="editarAdm.jsp?id=<%=administrador.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+								<a id="btns" href="crudAdm.jsp?id=<%=administrador.getId() %>&acao=excluirAdm" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 							</td>
 						</tr>
 						<% } %>
 					</tbody>		
 				</table>
+				</div>
 		</div>
 		<div class="col-md-12 text-center">
 
@@ -96,6 +103,7 @@
 
 			</div>
 	</div>
+</div>
 </div>
 <!--INCIO PAGINAÇÃO ADMINISTRADOR  -->
 <script>

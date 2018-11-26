@@ -36,7 +36,7 @@
 			</a>
 		</div>
 		
-		<div class="col-md-12">
+		<div class="col-md">
 			<div class="card-body3" align="center" >
 			<table class="table table-hover table-striped" style="color: white">
 				<thead>

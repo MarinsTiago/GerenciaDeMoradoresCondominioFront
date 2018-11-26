@@ -22,12 +22,12 @@
 %>
 <body>
 	<div class="container">
-	<div class="card6">
+	
 	<div class="row">
 		<div class="col-lg">
 		<div align="left" class="card-header" style="color: white">
 			<h1>Porteiros</h1>
-			<a href="../morador/cadastroPorteiro.jsp" class="btn btn-info">
+			<a href="../porteiro/cadastrarPorteiro.jsp" class="btn btn-info">
 			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 			</a>
 		</div>
@@ -92,7 +92,7 @@
 </div>
 </div>
 </div>
-</div>
+
 <script>
 		function proximaPagina() {
 			var results = new RegExp('[\?&]pag=([^&#]*)')
