@@ -24,7 +24,7 @@
 	<div class="container">
 	
 	<div class="row">
-		<div class="col-lg">
+		<div class="col-lg-12">
 		<div align="left" class="card-header" style="color: white">
 			<h1>Porteiros</h1>
 			<a href="../porteiro/cadastrarPorteiro.jsp" class="btn btn-info">
@@ -32,7 +32,7 @@
 			</a>
 		</div>
 		
-		<div class="col-md-12">
+		<div class="col-lg-12">
 				<div class="card-body3" align="center" >
 			<table class="table table-hover table-striped" style="color: white">
 				<thead>
@@ -73,7 +73,7 @@
 				
 				</table>
 		</div>
-		<div class="col-md-12 text-center">
+		<div class="col-lg-12 text-center">
 
 			<button onclick="paginaAnterior()" type="button"
 				<%if (paginaAtual == 1)
