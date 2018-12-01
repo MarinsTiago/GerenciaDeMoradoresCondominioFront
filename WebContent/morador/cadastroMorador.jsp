@@ -10,7 +10,7 @@
 	
 	<div class="container">
 	<div class="d-flex justify-content-center h-100">
-	<form action="../proprietario/crudProprietario.jsp" method="POST" class="contact100-form validate-form">
+	<form action="../morador/crudMorador.jsp" method="POST" class="contact100-form validate-form">
 		<div class="card3">
 			<div align="center" class="card-header">
 	
@@ -23,18 +23,18 @@
 			<div class="card-body2" align="center">
 				<div class="wrap-input100 rs1 validate-input">				
 				<div class="form-container">
-  <span class="input-label"><h5>Nome:</h5></span><input type="text"   name="first_name" required> <br>
+  <span class="input-label"><h5>Nome:</h5></span><input type="text"   name="nome" required> <br>
   <span class="input-label"><h5>CPF:</h5></span><input type="text" name="cpf"   onkeypress="return justNumber(event)" required> <br>
   <span class="input-label"><h5>Email:</h5></span><input type="text" name="email"   required> <br>
-  <span class="input-label"><h5>Veiculo:</h5></span><input type="text" name="Veiculo"   required> <br>
-  <span class="input-label"><h5>Telefone:</h5></span><input type="text" name="telefone"   onkeypress="return justNumber(event)" required>
+  <span class="input-label"><h5>Veiculo:</h5></span><input type="text" name="veiculo"   required> <br>
+  <span class="input-label"><h5>Telefone:</h5></span><input type="text" name="telResidencial"   onkeypress="return justNumber(event)" required>
   <span class="input-label"><h5>Celular:</h5></span><input type="text" name="celular"   onkeypress="return justNumber(event)" required> <br>
-  <span class="input-label"><h5>Login:</h5></span><input type="text" name="Login"    required> <br>
-  <span class="input-label"><h5>Senha:</h5></span><input type="text" name="Senha"   required> <br>
+  <span class="input-label"><h5>Login:</h5></span><input type="text" name="login"    required> <br>
+  <span class="input-label"><h5>Senha:</h5></span><input type="text" name="senha"   required> <br>
   <span class="input-label2"><h5>Escritura</h5></span><input type="radio" name="doc" value="escritura">
   <span class="input-label2"><h5>Contrato de compra</h5></span><input type="radio" name="doc" value="contratoCompra">
-  <span class="input-label2"><h5>Inquilino</h5></span><input type="radio" name="morador" value="inquilino">
-  <span class="input-label2"><h5>Proprietario</h5></span><input type="radio" name="morador" value="proprietario">
+  <span class="input-label2"><h5>Inquilino</h5></span><input type="radio" name="doc" value="inquilino">
+  <span class="input-label2"><h5>Proprietario</h5></span><input type="radio" name="doc" value="proprietario">
 </div>		
 				</div>
 			
