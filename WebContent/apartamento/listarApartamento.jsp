@@ -46,14 +46,14 @@
 <div class="card6">
 
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-lg-12">
 		<div align="left" class="card-header">
 			<h1>Apartamentos</h1>
 		<a href="../apartamento/cadastrarApartamento.jsp" class="btn btn-info">
 			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 			</a>
 		</div>
-		<div class="col-md">
+		<div class="col-lg-12">
 		<div class="card-body3" align="center" >
 			<table class="table table-hover table-striped" style="color: white">
 				<thead>
@@ -109,7 +109,7 @@
 				</table>
 				</div>
 		</div>
-		<div class="col-md-12 text-center">
+		<div class="col-lg-12 text-center">
 
 			<button onclick="paginaAnterior()" type="button"
 				<%if (paginaAtual == 1)

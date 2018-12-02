@@ -49,7 +49,7 @@
 	<div class="col-lg-12">
 	<div align="left" class="card-header" style="color: white">
 	
-		<h1>Condominios</h1>
+		<h1>Condomínios</h1>
 	<a href="../condominio/cadastrarCondominio.jsp" class="btn btn-info">
 			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 			</a>

@@ -22,7 +22,7 @@
 %>
 <body>
 	<div class="container">
-	
+	<div class="card6"> 
 	<div class="row">
 		<div class="col-lg-12">
 		<div align="left" class="card-header" style="color: white">
@@ -92,6 +92,7 @@
 </div>
 </div>
 </div>
+
 
 <script>
 		function proximaPagina() {
