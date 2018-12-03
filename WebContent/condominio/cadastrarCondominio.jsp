@@ -13,14 +13,13 @@
 				<input type="hidden" name="acao" value="incluirCondominio">
 		<div class="card5">
 			<div align="center" class="card-header">
-	
 				<span class="contact100-form-title"><h3>Cadastro Condomínio</h3></span>
 			</div>
 			<div class="card-body2" align="center">
 				<div class="wrap-input100 rs1 validate-input">				
 				<div class="form-container">
 				
-				<span class="input-label"><h5>Nome:</h5></span><input type="text" name="nome" required> <br>
+				<span class="input-label"><h5>Nome:</h5></span><input type="text" name="nome"> <br>
 				</div>
 				</div>
 				</div>
