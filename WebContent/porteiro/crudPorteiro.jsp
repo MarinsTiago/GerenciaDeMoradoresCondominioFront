@@ -53,9 +53,9 @@
 		Condominio c = cc.buscarPorId(condominio);
 		
 		String idAux = request.getParameter("id");
-		
+		 
 		if(idAux != null && !idAux.isEmpty()) {
-		      Long.parseLong(request.getParameter("idAux"));
+		     Long id = Long.parseLong(request.getParameter("idAux"));
 			
 		}
 				
