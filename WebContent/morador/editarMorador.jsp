@@ -21,7 +21,7 @@
 
 	<div class="login">
 <form action="../morador/crudMorador.jsp" method="POST">
-<div class="card7">
+<div class="card3">
 <div class="col-lg-12">
 	<div class="row">
 	
@@ -29,7 +29,7 @@
 			  <input type="hidden" name="tipoUsuario" value="morador"> <!--NÃO ALTERAR ESTE CAMPO-->
 			  <input type="hidden" name="id" value="<%=m.getId()%>">
 			  
-			  <div class="card-body4" align="center">
+			  <div class="card-body2" align="center">
 			  Nome:<br>
 			  <input type="text" style="color:blue;" name="nome" class="form-control" value="<%=m.getNome() %>" >
 			  <br>

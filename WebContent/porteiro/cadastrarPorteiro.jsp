@@ -18,15 +18,13 @@
 	<div class="container">
 	<div class="d-flex justify-content-center h-100">
 	<form action="../porteiro/crudPorteiro.jsp" method="POST" class="contact100-form validate-form">
-	
-		<input type="hidden" name="acao" value="incluirPorteiro"> <!--NÃO ALTERAR ESTE CAMPO-->
-		<input type="hidden" name="tipoUsuario" value="porteiro"> <!--NÃO ALTERAR ESTE CAMPO-->
+
 		<div class="card2">
 			<div align="center" class="card-header">
 	
-	
-				<input type="hidden" name="acao" value="incluirProprietario">	
-				<input type="hidden" name="tipoUsuario" value="proprietario"><!--Não alterar este campo-->
+		
+		<input type="hidden" name="acao" value="incluirPorteiro"> <!--NÃO ALTERAR ESTE CAMPO-->
+		<input type="hidden" name="tipoUsuario" value="porteiro"> <!--NÃO ALTERAR ESTE CAMPO-->
 				
 				<span class="contact100-form-title"><h3>Cadastro Porteiro</h3></span>
 			</div>
@@ -50,6 +48,7 @@
 			<button style="background-color: #00BFFF"  class="contact100-form-btn">
 				Submit
 				</button>
+		</div>
 		</div>
 	</form>
 	</div>

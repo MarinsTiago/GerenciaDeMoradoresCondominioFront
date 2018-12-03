@@ -15,8 +15,8 @@
 			<div align="center" class="card-header">
 	
 	
-				<input type="hidden" name="acao" value="incluirProprietario">	
-				<input type="hidden" name="tipoUsuario" value="proprietario"><!--Não alterar este campo-->
+				<input type="hidden" name="acao" value="incluirMorador">	
+				<input type="hidden" name="tipoUsuario" value="morador"><!--Não alterar este campo-->
 				
 				<span class="contact100-form-title"><h3>Cadastro Morador</h3></span>
 			</div>

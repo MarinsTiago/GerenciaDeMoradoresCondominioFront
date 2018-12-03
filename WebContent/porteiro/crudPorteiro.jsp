@@ -52,7 +52,13 @@
 		
 		Condominio c = cc.buscarPorId(condominio);
 		
-		long id = Long.parseLong(request.getParameter("id"));
+		String idAux = request.getParameter("id");
+		
+		if(idAux != null && !idAux.isEmpty()) {
+		      Long.parseLong(request.getParameter("idAux"));
+			
+		}
+				
 		String tipoUsuario = request.getParameter("tipoUsuario");
 		String nome = request.getParameter("nome");
 		String cpf = request.getParameter("cpf");
@@ -61,6 +67,8 @@
 		String email = request.getParameter("email");
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
+		
+	
 		
 		Porteiro p = new Porteiro();
 		p.setId(id);
@@ -77,18 +85,24 @@
 		PorteiroControl pc = new PorteiroControl();
 		pc.alterarPorteiro(p);
 		response.sendRedirect("listarPorteiro.jsp");
+		
 	}else if(acao.equals("excluirPorteiro")){
+		
 		long id = Long.parseLong(request.getParameter("id"));
+		
+		
 		PorteiroControl pc = new PorteiroControl();
 		pc.deletar(id);
 		response.sendRedirect("listarPorteiro.jsp");
+		
+		
 	}else if(acao.equals("buscarMorador")){
 		
 		String nome = request.getParameter("nome");
 		PorteiroControl pc = new PorteiroControl();
 		Morador m = pc.buscarMoradorPorNome(nome);
 		if(m != null){
-			response.sendRedirect("teste.jsp");	
+			response.sendRedirect("indexPorteiro.jsp");	
 		}
 	}
 
