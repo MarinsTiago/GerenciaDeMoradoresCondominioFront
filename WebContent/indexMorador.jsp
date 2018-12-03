@@ -1,3 +1,4 @@
+<%@include file="/estrutura/header.jsp"%>
 <%@page import="model.Usuario"%>
 <%@page import="model.Morador"%>
 <%@ include file="/estrutura/header.jsp"%>

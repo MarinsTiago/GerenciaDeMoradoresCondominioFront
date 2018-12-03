@@ -1,3 +1,4 @@
+<%@include file="/estrutura/header.jsp"%>
 <%@page import="model.Proprietario"%>
 <%@page import="model.Morador"%>
 <%@page import="java.util.List"%>
@@ -5,12 +6,12 @@
 <%@page import="control.MoradorControl"%>
 <%@page import="model.Apartamento"%>
 <%@page import="control.ApartamentoControl"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -55,11 +56,11 @@
 		%>
 		</select><br>
 		
-		Numero apartamento:<br><input type="number" name="numero" value="<%=a.getNumero()%>"><br>
+		Numero apartamento:<br><input type="number" style="color:blue;" name="numero" value="<%=a.getNumero()%>"><br>
 		
-		Bloco apartamento:<br><input type="text" name="bloco" value="<%=a.getBloco()%>"><br>
+		Bloco apartamento:<br><input type="text" style="color:blue;" name="bloco" value="<%=a.getBloco()%>"><br>
 		
-		Apartamento Ocupado?<input type="checkbox" name="ocupado" <%if(a.getOcupado().equals("sim")){ %>checked="checked" <% }%>><br>
+		Apartamento Ocupado?<input type="checkbox" style="color:blue;" name="ocupado" <%if(a.getOcupado().equals("sim")){ %>checked="checked" <% }%>><br>
 		
 		<input type="submit" value="Atualizar">
 

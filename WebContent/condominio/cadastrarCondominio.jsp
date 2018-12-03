@@ -19,7 +19,7 @@
 				<div class="wrap-input100 rs1 validate-input">				
 				<div class="form-container">
 				
-				<span class="input-label"><h5>Nome:</h5></span><input type="text" name="nome"> <br>
+				<span class="input-label"><h5>Nome:</h5></span><input type="text" style="color:blue;" name="nome"> <br>
 				</div>
 				</div>
 				</div>

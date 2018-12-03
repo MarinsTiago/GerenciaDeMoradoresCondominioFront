@@ -52,11 +52,11 @@
 		%>
 		</select><br>
 		
-		Numero apartamento:<br><input type="number" name="numero"><br>
+		Numero apartamento:<br><input type="number" style="color:blue;" name="numero"><br>
 		
-		Bloco apartamento:<br><input type="text" name="bloco"><br>
+		Bloco apartamento:<br><input type="text" style="color:blue;" name="bloco"><br>
 		
-		Apartamento Ocupado?<input type="checkbox" name="ocupado"><br>
+		Apartamento Ocupado?<input type="checkbox" style="color:blue;" name="ocupado"><br>
 		
 		<input type="submit" value="Cadastrar">
 	

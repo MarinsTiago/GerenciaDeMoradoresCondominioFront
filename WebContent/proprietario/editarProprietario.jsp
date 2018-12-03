@@ -1,3 +1,4 @@
+<%@include file="/estrutura/header.jsp"%>
 <%@page import="model.Proprietario"%>
 <%@page import="control.ProprietarioControl"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -19,13 +20,13 @@
 	<input type="hidden" name="acao" value="editarProprietario">
 	<input type="hidden" name="tipoUsuario" value="proprietario"><!--Não alterar este campo-->
 	<input type="hidden" name="id" value="<%=p.getId()%>">
-	Nome:<input type="text" name="nome" value="<%=p.getNome()%>"><br>
-	CPF:<input type="text" name="cpf" value="<%=p.getCpf()%>"><br>
-	E-mail:<input type="email" name="email" value="<%=p.getEmail()%>"><br>
-	Telefone:<input type="text" name="telefone" value="<%=p.getTelefone()%>"><br>
-	Celular:<input type="text" name="celular" value="<%=p.getCelular()%>"><br>
-	Login:<input type="text" name="login" value="<%=p.getSenha()%>"><br>
-	Senha:<input type="password" name="senha" value="<%=p.getSenha()%>"><br>
+	Nome:<input type="text" style="color:blue;" name="nome" value="<%=p.getNome()%>"><br>
+	CPF:<input type="text" style="color:blue;" name="cpf" value="<%=p.getCpf()%>"><br>
+	E-mail:<input type="email" style="color:blue;" name="email" value="<%=p.getEmail()%>"><br>
+	Telefone:<input type="text" style="color:blue;" name="telefone" value="<%=p.getTelefone()%>"><br>
+	Celular:<input type="text" style="color:blue;" name="celular" value="<%=p.getCelular()%>"><br>
+	Login:<input type="text" style="color:blue;" name="login" value="<%=p.getSenha()%>"><br>
+	Senha:<input type="password" style="color:blue;" name="senha" value="<%=p.getSenha()%>"><br>
 	<input type="submit" value="Atualizar">
 	</form>
 </body>

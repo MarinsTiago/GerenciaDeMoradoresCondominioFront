@@ -21,9 +21,9 @@
 			<div class="card-body2" align="center">
 				<div class="wrap-input100 rs1 validate-input">				
 				<div class="form-container">
-  <span class="input-label"><h5>Nome:</h5></span><input type="text"  name="nome" required> <br>
-  <span class="input-label"><h5>Login:</h5></span><input type="text" name="login" required> <br>
-  <span class="input-label"><h5>Senha:</h5></span><input type="text" name="senha"    required> <br>
+  <span class="input-label"><h5>Nome:</h5></span><input type="text" style="color:blue;" name="nome" required> <br>
+  <span class="input-label"><h5>Login:</h5></span><input type="text" style="color:blue;" name="login" required> <br>
+  <span class="input-label"><h5>Senha:</h5></span><input type="text" style="color:blue;" name="senha"    required> <br>
   
 	</div>
 	</div>

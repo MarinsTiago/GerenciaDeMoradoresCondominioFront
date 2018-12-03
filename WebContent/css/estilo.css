@@ -13,6 +13,10 @@ height: 100%;
 align-content: center;
 }
 
+.input
+{
+	color: #0000a0;
+}
 .card{
 height: 300px;
 margin-top: 100px;
@@ -61,6 +65,16 @@ width: 100%;
 background-color: rgba(0,0,0,0.5) !important;
 
 }
+
+.card7{
+	height: 300px;
+margin-top: auto;
+margin-bottom: auto;
+width: 100%;
+background-color: rgba(0,0,0,0.5) !important;
+
+}
+
 
 .social_icon span{
 font-size: 60px;
@@ -180,7 +194,7 @@ color: white;
 	align-content: center;
 	color: white;
 	margin-right: 100px;
-	margin-top: 50px;
+	margin-top: 200px;
 }
 
 
@@ -197,5 +211,8 @@ color: white;
   text-align: right;
   padding-right: 10px;
   
+}
+.table-hover{
+	backgroud-color:blue;
 }
 }

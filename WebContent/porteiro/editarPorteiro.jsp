@@ -1,3 +1,4 @@
+<%@include file="/estrutura/header.jsp"%>
 <%@page import="model.Condominio"%>
 <%@page import="java.util.List"%>
 <%@page import="control.CondominioControl"%>
@@ -23,14 +24,14 @@
 	<input type="hidden" name="acao" value="editarPorteiro">
 	<input type="hidden" name="tipoUsuario" value="porteiro"><!--Não alterar este campo-->
 	<input type="hidden" name="id" value="<%=p.getId()%>">
-	Nome:<input type="text" name="nome" value="<%=p.getNome()%>"><br>
-	CPF:<input type="text" name="cpf" value="<%=p.getCpf()%>"><br>
-	Telefone:<input type="text" name="telefone" value="<%=p.getTelefone()%>"><br>
-	Celular:<input type="text" name="celular" value="<%=p.getCelular()%>"><br>
-	E-mail:<input type="email" name="email" value="<%=p.getEmail()%>"><br>
-	Login:<input type="text" name="login" value="<%=p.getLogin()%>"><br>
-	Senha:<input type="text" name="senha" value="<%=p.getSenha()%>"><br>
-	<select id="condominio" name="condominio">
+	Nome:<input type="text" style="color:blue;" name="nome" value="<%=p.getNome()%>"><br>
+	CPF:<input type="text" style="color:blue;" name="cpf" value="<%=p.getCpf()%>"><br>
+	Telefone:<input type="text" style="color:blue;" name="telefone" value="<%=p.getTelefone()%>"><br>
+	Celular:<input type="text" style="color:blue;" name="celular" value="<%=p.getCelular()%>"><br>
+	E-mail:<input type="email" style="color:blue;" name="email" value="<%=p.getEmail()%>"><br>
+	Login:<input type="text" style="color:blue;" name="login" value="<%=p.getLogin()%>"><br>
+	Senha:<input type="text" style="color:blue;" name="senha" value="<%=p.getSenha()%>"><br>
+	<select id="condominio"  name="condominio">
 			 <option>Selecione o Condominio</option>
 		<%
 			for(Condominio c: condominios){

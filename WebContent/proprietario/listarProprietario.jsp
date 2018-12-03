@@ -55,7 +55,7 @@
 		
 		<div class="col-lg-12">
 		<div class="card-body4" align="center" >
-			<table class="table table-hover table-striped" style="color: white">
+			<table class="table" style="color: white">
 				<thead>
 					<th>Login</th>
 				</thead>

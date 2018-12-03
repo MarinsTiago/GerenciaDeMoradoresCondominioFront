@@ -33,13 +33,13 @@
 			<div class="card-body2" align="center">
 				<div class="wrap-input100 rs1 validate-input">				
 				<div class="form-container">
-  <span class="input-label"><h5>Nome:</h5></span><input type="text"   name="nome" required> <br>
-  <span class="input-label"><h5>CPF:</h5></span><input type="text" name="cpf"  onkeypress="return justNumber(event)" required> <br>
-  <span class="input-label"><h5>Email:</h5></span><input type="text" name="email"   required> <br>
-  <span class="input-label"><h5>Telefone:</h5></span><input type="text" name="telefone"   onkeypress="return justNumber(event)" required>
-  <span class="input-label"><h5>Celular:</h5></span><input type="text" name="celular"   onkeypress="return justNumber(event)" required> <br>
-  <span class="input-label"><h5>Login:</h5></span><input type="text" name="login"    required> <br>
-  <span class="input-label"><h5>Senha:</h5></span><input type="text" name="senha"    required> <br>
+  <span class="input-label"><h5>Nome:</h5></span><input type="text" style="color:blue;"   name="nome" required> <br>
+  <span class="input-label"><h5>CPF:</h5></span><input type="text" style="color:blue;" name="cpf"  onkeypress="return justNumber(event)" required> <br>
+  <span class="input-label"><h5>Email:</h5></span><input type="text" style="color:blue;" name="email"   required> <br>
+  <span class="input-label"><h5>Telefone:</h5></span><input type="text" style="color:blue;" name="telefone"   onkeypress="return justNumber(event)" required>
+  <span class="input-label"><h5>Celular:</h5></span><input type="text" style="color:blue;" name="celular"   onkeypress="return justNumber(event)" required> <br>
+  <span class="input-label"><h5>Login:</h5></span><input type="text" style="color:blue;" name="login"    required> <br>
+  <span class="input-label"><h5>Senha:</h5></span><input type="text" style="color:blue;" name="senha"    required> <br>
   
 </div>
 
