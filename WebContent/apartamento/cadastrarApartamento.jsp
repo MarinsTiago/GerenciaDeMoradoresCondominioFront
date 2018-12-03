@@ -1,10 +1,10 @@
+<%@ include file="/estrutura/header.jsp"%>
 <%@page import="model.Proprietario"%>
 <%@page import="model.Morador"%>
 <%@page import="java.util.List"%>
 <%@page import="control.ProprietarioControl"%>
 <%@page import="control.MoradorControl"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"   %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -29,9 +29,14 @@
 	List<Proprietario> proprietarios = pc.listar(paginaAtual, limitePorPagina);
 %>
 <body>
-
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+	
 	<form action="../apartamento/crudApartamento.jsp" method="POST">
 		<input type="hidden" name="acao" value="incluirApartamento">
+		<div class="card-body2" align="center">
+				<div class="wrap-input100 rs1 validate-input">				
+				<div class="form-container">
 		
 		<select id="morador" name="morador">
 			 <option value="0">Selecione o morador</option>
@@ -52,6 +57,7 @@
 		%>
 		</select><br>
 		
+		
 		Numero apartamento:<br><input type="number" style="color:blue;" name="numero"><br>
 		
 		Bloco apartamento:<br><input type="text" style="color:blue;" name="bloco"><br>
@@ -59,9 +65,13 @@
 		Apartamento Ocupado?<input type="checkbox" style="color:blue;" name="ocupado"><br>
 		
 		<input type="submit" value="Cadastrar">
-	
+	</div>
+		</div>
+		</div>
 	
 	</form>
+	</div>
+	</div>
 
 </body>
 </html>

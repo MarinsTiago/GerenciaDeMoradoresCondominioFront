@@ -17,10 +17,16 @@ Condominio c = cc.buscarPorId(id);
 %>
 <body>
 <form action="../condominio/crudCondominio.jsp" method="POST">
+<div class="card8">
+<div class="col-lg-12">
 	<input type="hidden" name="acao" value="editarCondominio">
 	<input type="hidden" name="id" value="<%=c.getId()%>">
+	<div class="card-body4" align="center">
 	Nome:<br><input type="text" style="color:blue;" name="nome" value="<%=c.getNome()%>"><br>
 	<input type="submit" value="Atualizar">
+	</div>
+	</div>
+	</div>
 	</form>
 </body>
 </html>

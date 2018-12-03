@@ -1,12 +1,12 @@
 <%@include file="/estrutura/header.jsp"%>
 <%@page import="model.Morador"%>
 <%@page import="control.MoradorControl"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <%
@@ -16,14 +16,20 @@
 
 %>
 <body>
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+
+	<div class="login">
+<form action="../morador/crudMorador.jsp" method="POST">
+<div class="card7">
+<div class="col-lg-12">
 	<div class="row">
-	<div class="col-md-4"></div>
-	<div class="col-md-4">
-		<div class="login">
-			<form method="POST" action="crudMorador.jsp">
+	
 			  <input type="hidden" name="acao" value="editarMorador" >
 			  <input type="hidden" name="tipoUsuario" value="morador"> <!--NÃO ALTERAR ESTE CAMPO-->
 			  <input type="hidden" name="id" value="<%=m.getId()%>">
+			  
+			  <div class="card-body4" align="center">
 			  Nome:<br>
 			  <input type="text" style="color:blue;" name="nome" class="form-control" value="<%=m.getNome() %>" >
 			  <br>
@@ -57,13 +63,18 @@
 			  Senha:<br>
 			  <input type="text" style="color:blue;" name="senha" class="form-control" value="<%=m.getSenha()%>"><br>
 			  <br>
-				<input type="submit" class="btn btn-primary" value="Salvar">
+				<input type="submit" class="btn btn-primary" value="Atualizar">
 				<input type="button" onclick="history.back()" class="btn btn-default" value="Cancelar">
+			</div>
+			</div>
+			</div>
+			</div>
 			
 			</form> 
+			</div>
+			</div>
 		</div>
-	</div>
-	<div class="col-md-4"></div>
-	</div>
+	<div class="col-lg-12"></div>
+	
 </body>
 </html>

@@ -4,12 +4,12 @@
 <%@page import="control.CondominioControl"%>
 <%@page import="model.Porteiro"%>
 <%@page import="control.PorteiroControl"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <%
@@ -21,9 +21,13 @@
 %>
 <body>
 <form action="../porteiro/crudPorteiro.jsp" method="POST">
+<div class="card8">
+<div class="col-lg-12">
 	<input type="hidden" name="acao" value="editarPorteiro">
 	<input type="hidden" name="tipoUsuario" value="porteiro"><!--Não alterar este campo-->
 	<input type="hidden" name="id" value="<%=p.getId()%>">
+	
+	<div class="card-body4" align="center">
 	Nome:<input type="text" style="color:blue;" name="nome" value="<%=p.getNome()%>"><br>
 	CPF:<input type="text" style="color:blue;" name="cpf" value="<%=p.getCpf()%>"><br>
 	Telefone:<input type="text" style="color:blue;" name="telefone" value="<%=p.getTelefone()%>"><br>
@@ -39,7 +43,11 @@
 			}	
 		%>
 	</select><br>
-	<input type="submit" value="Cadastrar">
+	<input type="submit" value="Atualizar">
+	</div>
+	</div>
+	</div>
+
 	</form>
 </body>
 </html>
