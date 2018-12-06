@@ -34,7 +34,10 @@
 	Login:<input type="text" style="color:blue;" name="login" value="<%=p.getSenha()%>"><br>
 	Senha:<input type="password" style="color:blue;" name="senha" value="<%=p.getSenha()%>"><br>
 	
-	<input type="submit" value="Atualizar">
+			<input type="submit" class="btn btn-primary" value="Atualizar">
+		<input type="button" onclick="history.back()" class="btn btn-default" value="Cancelar">
+		
+					
 	
 	</div>
 	</div>
