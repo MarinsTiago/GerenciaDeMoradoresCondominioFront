@@ -92,7 +92,12 @@
 					</tbody>
 				
 				</table>
+				
+				<div align="center">
+					<a class="btn btn-primary" type="button" href="javascript:history.back()">Voltar a página anterior</a>
+				</div>
 		</div>
+		<br><br>
 			<div class="col-lg-12 text-center">
 
 			<button onclick="paginaAnterior()" type="button"

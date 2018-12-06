@@ -80,7 +80,9 @@
 				</div>
 		</div>
 		<div class="col-lg-12 text-center">
-
+			<div align="center">
+				<a class="btn btn-primary" type="button" href="javascript:history.back()">Voltar a página anterior</a>
+			</div>
 			<button onclick="paginaAnterior()" type="button"
 				<%if (paginaAtual == 1)
 				         out.print("disabled"); %>

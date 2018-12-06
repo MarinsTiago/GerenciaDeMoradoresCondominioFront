@@ -33,8 +33,8 @@
   <span class="input-label"><h5>Senha:</h5></span><input type="password" style="color:blue;" name="senha"   required> <br>
   <span class="input-label2"><h5>Escritura</h5></span><input type="radio" style="color:blue;" name="doc" value="escritura">
   <span class="input-label2"><h5>Contrato de compra</h5></span><input type="radio" style="color:blue;" name="doc" value="contratoCompra">
-  <span class="input-label2"><h5>Inquilino</h5></span><input type="radio" style="color:blue;" name="doc" value="inquilino">
-  <span class="input-label2"><h5>Proprietario</h5></span><input type="radio" style="color:blue;" name="doc" value="proprietario">
+  <span class="input-label2"><h5>Inquilino</h5></span><input type="radio" style="color:blue;" name="morador" value="inquilino">
+  <span class="input-label2"><h5>Proprietario</h5></span><input type="radio" style="color:blue;" name="morador" value="proprietario">
 </div>		
 				</div>
 			
@@ -45,11 +45,13 @@
 						</button>
 					</div>
 					</div>
+					
+					<div align="center">
+						<a class="btn btn-primary" type="button" href="javascript:history.back()">Voltar a página anterior</a>
+					</div>
 			</form>
 		</div>
 	</div>
-
-
 
 	<div id="dropDownSelect1"></div>
 

@@ -28,6 +28,10 @@
 							Submit
 						</button>
 					</div>
+					
+			<div align="center" style="margin-top: 180px">
+				<a class="btn btn-primary" type="button" href="javascript:history.back()">Voltar a página anterior</a>
+			</div>
 		</div>
 				
 			</form>

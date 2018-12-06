@@ -75,7 +75,7 @@
 		
 		<div align="center" class="container-contact100-form-btn">
 						<input type="submit" class="btn btn-primary" value="Atualizar">
-				<input type="button" onclick="history.back()" class="btn btn-default" value="Cancelar">
+				<input type="button" onclick="history.back()" class="btn btn-default" value="Cancelar">		
 </div>
 </div>
 </div>

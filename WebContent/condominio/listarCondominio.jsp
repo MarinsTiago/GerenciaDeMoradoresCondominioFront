@@ -71,17 +71,24 @@
 					</td>
 					<td width="180">
 								<a id="btns" href="editarCondominio.jsp?id=<%=condominio.getId() %>"class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-								<a id="btns" href="crudCondominio.jsp?id=<%=condominio.getId() %>&acao=excluirCondominio" class="btn btn-danger delBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+								<a id="btns" href="crudCondominio.jsp?id=<%=condominio.getId() %>&acao=excluirCondominio" class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 							</td>
 				</tr>
 					<% } %>
 				</tbody>
 			
 			</table>
+			
+			<div align="center" style="margin-top: 180px">
+				<a class="btn btn-primary" type="button" href="javascript:history.back()">Voltar a página anterior</a>
 			</div>
+			</div>
+			<br>
+			<br>
 	</div>
+	
 	<div class="col-lg-12 text-center">
-
+		
 			<button onclick="paginaAnterior()" type="button"
 				<%if (paginaAtual == 1)
 				         out.print("disabled"); %>

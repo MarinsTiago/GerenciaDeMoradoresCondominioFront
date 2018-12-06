@@ -45,7 +45,7 @@
 				<div class="form-container">
 		
 		<div class="lg-12">
-		<select class="form-control" id="morador" name="morador">
+		<select class="form-control" id="morador" name="morador" style="height:2.5em;">
 		
 			 <option value="0">Selecione o morador</option>
 		<%
@@ -58,7 +58,7 @@
 		</div>
 		<br>
 		<div class="col-lg-12">
-		<select class="form-control" id="proprietario" name="proprietario">
+		<select class="form-control" id="proprietario" name="proprietario" style="height:2.5em;">
 			<option>Selecione o proprietario</option>
 			<%
 			for(Proprietario p: proprietarios){
@@ -78,6 +78,10 @@
 						<button style="background-color: #00BFFF"  class="contact100-form-btn">
 							Submit
 						</button>
+						
+		<div align="center" style="margin-top: 200px">
+			<a class="btn btn-primary" type="button" href="javascript:history.back()">Voltar a página anterior</a>
+		</div>				
 	</div>
 		</div>
 		</div>

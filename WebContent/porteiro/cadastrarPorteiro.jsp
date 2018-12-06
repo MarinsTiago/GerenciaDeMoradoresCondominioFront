@@ -38,7 +38,7 @@
   <span class="input-label"><h5>Celular:</h5></span><input type="text" style="color:blue;" name="celular"   onkeypress="return justNumber(event)" required> <br>
   <div class="mb-3">
   		
-  		<select class="form-control" id="condominio" name="condominio">
+  		<select class="form-control" id="condominio" name="condominio" style="height:2.5em;">
   			<option>Selecione o Condominio</option>
   			<%
   				for(Condominio c: condominios){
@@ -60,7 +60,12 @@
 				Submit
 				</button>
 		</div>
+		<br>
 		</div>
+		<div align="center">
+			<a class="btn btn-primary" type="button" href="javascript:history.back()">Voltar a página anterior</a>
+		</div>
+		
 	</form>
 	</div>
 </div>
