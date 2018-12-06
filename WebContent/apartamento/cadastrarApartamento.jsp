@@ -4,8 +4,6 @@
 <%@page import="java.util.List"%>
 <%@page import="control.ProprietarioControl"%>
 <%@page import="control.MoradorControl"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"   %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -31,47 +29,66 @@
 <body>
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
-	
 	<form action="../apartamento/crudApartamento.jsp" method="POST">
+	<div class="card4">
+			<div align="center" class="card-header">
+			
+				<span class="contact100-form-title"><h3>Cadastro de Apartamento</h3></span>
+			</div>
+			<div class="card-body2" align="center">
+	
+	
 		<input type="hidden" name="acao" value="incluirApartamento">
-		<div class="card-body2" align="center">
+		
+	
 				<div class="wrap-input100 rs1 validate-input">				
 				<div class="form-container">
 		
-		<select id="morador" name="morador">
+		<div class="lg-12">
+		<select class="form-control" id="morador" name="morador">
+		
 			 <option value="0">Selecione o morador</option>
 		<%
 			for(Morador m: moradores){
 				out.print("<option value='" + m.getId() + "'>"+ m.getNome() + "</option>");
 			}	
 		%>
-		</select><br>
 		
-		<select id="proprietario" name="proprietario">
+		</select>
+		</div>
+		<br>
+		<div class="col-lg-12">
+		<select class="form-control" id="proprietario" name="proprietario">
 			<option>Selecione o proprietario</option>
-			
 			<%
 			for(Proprietario p: proprietarios){
 				out.print("<option value='" + p.getId() + "'>"+ p.getNome() + "</option>");
 			}	
 		%>
-		</select><br>
+		</select>
+		</div>
 		
+		<br><span class="input-label">Numero Ap:</span><input type="number" style="color:blue;" name="numero"><br>
 		
-		Numero apartamento:<br><input type="number" style="color:blue;" name="numero"><br>
+		<br><span class="input-label">Bloco Ap:</span><input type="text" style="color:blue;" name="bloco"><br>
 		
-		Bloco apartamento:<br><input type="text" style="color:blue;" name="bloco"><br>
+		<span class="input-label">Apartamento Ocupado?</span><input type="checkbox" style="color:blue;" name="ocupado"> <br>
 		
-		Apartamento Ocupado?<input type="checkbox" style="color:blue;" name="ocupado"><br>
-		
-		<input type="submit" value="Cadastrar">
+		<div align="center" class="container-contact100-form-btn">
+						<button style="background-color: #00BFFF"  class="contact100-form-btn">
+							Submit
+						</button>
 	</div>
 		</div>
 		</div>
+	</div>
 	
+	</div>
 	</form>
 	</div>
 	</div>
+	
+	
 
 </body>
 </html>

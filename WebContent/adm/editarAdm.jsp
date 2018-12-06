@@ -30,8 +30,12 @@
 			<div class="card-body4" align="center">
 		Nome:<input type="text" style="color:blue;" name="nome" value="<%=a.getNome()%>"><br>
 		Login:<input type="text" style="color:blue;" name="login" value="<%=a.getLogin()%>"><br>
-		Senha:<input type="text" style="color:blue;" name="senha" value="<%=a.getSenha()%>"><br>
-		<input type="submit" value="Atualizar">
+		Senha:<input type="password" style="color:blue;" name="senha" value="<%=a.getSenha()%>"><br>
+
+		<input type="submit" class="btn btn-primary" value="Atualizar">
+		<input type="button" onclick="history.back()" class="btn btn-default" value="Cancelar">
+		
+						
 	</div>
 	</div>
 	</div>

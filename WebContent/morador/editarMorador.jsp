@@ -23,58 +23,49 @@
 <form action="../morador/crudMorador.jsp" method="POST">
 <div class="card3">
 <div class="col-lg-12">
-	<div class="row">
+
 	
 			  <input type="hidden" name="acao" value="editarMorador" >
 			  <input type="hidden" name="tipoUsuario" value="morador"> <!--NÃO ALTERAR ESTE CAMPO-->
 			  <input type="hidden" name="id" value="<%=m.getId()%>">
 			  
 			  <div class="card-body2" align="center">
-			  Nome:<br>
-			  <input type="text" style="color:blue;" name="nome" class="form-control" value="<%=m.getNome() %>" >
-			  <br>
-			  CPF:<br>
-			  <input type="text" style="color:blue;" name="cpf" class="form-control" value="<%=m.getCpf()%>">
-			  <br>
-			  E-mail:<br>
-			  <input type="text" style="color:blue;" name="email" class="form-control" value="<%=m.getEmail()%>">
-			  <br>
-			  Telefone Residencial:<br>
-			  <input type="text" style="color:blue;" name="telResidencial" class="form-control" value="<%=m.getTelefoneResidencial()%>"><br>
-			  <br>
-			  Telefone Comercial:<br>
-			  <input type="text" style="color:blue;" name="telComercial" class="form-control" value="<%=m.getTelefoneComercial()%>"><br>
-			  <br>
-			  Celular:<br>
-			  <input type="text" style="color:blue;" name="celular" class="form-control" value="<%=m.getCelular()%>"><br>
-			  <br>
-			  Tipo de Documento:<br>
-			  <input type="text" style="color:blue;" name="doc" class="form-control" value="<%=m.getTipoDocumento()%>"><br>
-			  <br>
-			  Tipo de Morador:<br>
-			  <input type="text" style="color:blue;" name="morador" class="form-control" value="<%=m.getTipoMorador()%>"><br>
-			  <br>
-			  Placa do Veículo:<br>
-			  <input type="text" style="color:blue;" name="veiculo" class="form-control" value="<%=m.getPlacaVeiculo()%>"><br>
-			  <br>
-			  Login:<br>
-			  <input type="text" style="color:blue;" name="login" class="form-control" value="<%=m.getLogin()%>"><br>
-			  <br>
-			  Senha:<br>
-			  <input type="text" style="color:blue;" name="senha" class="form-control" value="<%=m.getSenha()%>"><br>
-			  <br>
+			 
+			  Nome:<input type="text" style="color:blue;" name="nome" class="form-control" value="<%=m.getNome() %>" >
+			  
+			  CPF:<input type="text" style="color:blue;" name="cpf" class="form-control" value="<%=m.getCpf()%>">
+			  
+			  E-mail:<input type="text" style="color:blue;" name="email" class="form-control" value="<%=m.getEmail()%>">
+
+			  Tel Residencial:<input type="text" style="color:blue;" name="telResidencial" class="form-control" value="<%=m.getTelefoneResidencial()%>">
+			 
+			  Tel Comercial:<input type="text" style="color:blue;" name="telComercial" class="form-control" value="<%=m.getTelefoneComercial()%>">
+			 
+			  Celular:<input type="text" style="color:blue;" name="celular" class="form-control" value="<%=m.getCelular()%>">
+			  
+			  Tipo de Documento:<input type="text" style="color:blue;" name="doc" class="form-control" value="<%=m.getTipoDocumento()%>">
+
+			  Tipo de Morador:<input type="text" style="color:blue;" name="morador" class="form-control" value="<%=m.getTipoMorador()%>">
+			  
+			  Placa do Veículo:<input type="text" style="color:blue;" name="veiculo" class="form-control" value="<%=m.getPlacaVeiculo()%>">
+			  
+			  Login:<input type="text" style="color:blue;" name="login" class="form-control" value="<%=m.getLogin()%>">
+			  
+			  Senha:<input type="password" style="color:blue;" name="senha" class="form-control" value="<%=m.getSenha()%>"><br>
+			  
 				<input type="submit" class="btn btn-primary" value="Atualizar">
 				<input type="button" onclick="history.back()" class="btn btn-default" value="Cancelar">
-			</div>
-			</div>
-			</div>
+				</div>
+				</div>
 			</div>
 			
+			
 			</form> 
-			</div>
-			</div>
-		</div>
-	<div class="col-lg-12"></div>
+			
+		
+</div>
+</div>
+</div>
 	
 </body>
 </html>

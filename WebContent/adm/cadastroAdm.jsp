@@ -23,7 +23,7 @@
 				<div class="form-container">
   <span class="input-label"><h5>Nome:</h5></span><input type="text" style="color:blue;" name="nome" required> <br>
   <span class="input-label"><h5>Login:</h5></span><input type="text" style="color:blue;" name="login" required> <br>
-  <span class="input-label"><h5>Senha:</h5></span><input type="text" style="color:blue;" name="senha"    required> <br>
+  <span class="input-label"><h5>Senha:</h5></span><input type="password" style="color:blue;" name="senha"    required> <br>
   
 	</div>
 	</div>
@@ -33,7 +33,9 @@
 						<button style="background-color: #00BFFF"  class="contact100-form-btn">
 							Submit
 						</button>
+								
 					</div>
+			
 			</form>
 		</div>
 	</div>

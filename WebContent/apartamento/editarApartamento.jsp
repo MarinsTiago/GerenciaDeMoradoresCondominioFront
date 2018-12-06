@@ -34,10 +34,21 @@
 	List<Morador> moradores = mc.listar(paginaAtual, limitePorPagina);
 	List<Proprietario> proprietarios = pc.listar(paginaAtual, limitePorPagina);
 %>
+
+
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
 <form action="crudApartamento.jsp" method="POST">
+<div class="card7">
+<div class="col-lg-12">
+
+
 		<input type="hidden" name="acao" value="editarApartamento">
 		<input type="hidden" name="id" value="<%=a.getId()%>">
-		<select id="morador" name="morador">
+			<div class="card-body4" align="center">
+		<select class="form-control" id="morador" name="morador">
+		
+	
 			<option value="0">Selecione o morador</option>
 		<%
 			for(Morador m: moradores){
@@ -46,7 +57,7 @@
 		%>
 		</select><br>
 		
-		<select id="proprietario" name="proprietario">
+		<select class="form-control" id="proprietario" name="proprietario">
 			<option>Selecione o proprietario</option>
 			
 			<%
@@ -56,16 +67,23 @@
 		%>
 		</select><br>
 		
-		Numero apartamento:<br><input type="number" style="color:blue;" name="numero" value="<%=a.getNumero()%>"><br>
+		<br><span class="input-label">Numero Ap:</span><input type="number" style="color:blue;" name="numero"><br>
 		
-		Bloco apartamento:<br><input type="text" style="color:blue;" name="bloco" value="<%=a.getBloco()%>"><br>
+		<br><span class="input-label">Bloco Ap:</span><input type="text" style="color:blue;" name="bloco"><br>
 		
-		Apartamento Ocupado?<input type="checkbox" style="color:blue;" name="ocupado" <%if(a.getOcupado().equals("sim")){ %>checked="checked" <% }%>><br>
+		<span class="input-label">Apartamento Ocupado?</span><input type="checkbox" style="color:blue;" name="ocupado"> <br>
 		
-		<input type="submit" value="Atualizar">
+		<div align="center" class="container-contact100-form-btn">
+						<input type="submit" class="btn btn-primary" value="Atualizar">
+				<input type="button" onclick="history.back()" class="btn btn-default" value="Cancelar">
+</div>
+</div>
+</div>
+</div>
 
 	
 	</form>
-
+</div>
+</div>
 </body>
 </html>

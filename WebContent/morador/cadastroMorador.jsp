@@ -30,7 +30,7 @@
   <span class="input-label"><h5>Telefone:</h5></span><input type="text" style="color:blue;" name="telResidencial"   onkeypress="return justNumber(event)" required>
   <span class="input-label"><h5>Celular:</h5></span><input type="text" style="color:blue;" name="celular"   onkeypress="return justNumber(event)" required> <br>
   <span class="input-label"><h5>Login:</h5></span><input type="text" style="color:blue;" name="login"    required> <br>
-  <span class="input-label"><h5>Senha:</h5></span><input type="text" style="color:blue;" name="senha"   required> <br>
+  <span class="input-label"><h5>Senha:</h5></span><input type="password" style="color:blue;" name="senha"   required> <br>
   <span class="input-label2"><h5>Escritura</h5></span><input type="radio" style="color:blue;" name="doc" value="escritura">
   <span class="input-label2"><h5>Contrato de compra</h5></span><input type="radio" style="color:blue;" name="doc" value="contratoCompra">
   <span class="input-label2"><h5>Inquilino</h5></span><input type="radio" style="color:blue;" name="doc" value="inquilino">

@@ -1941,6 +1941,7 @@ select.form-control:focus::-ms-value {
 
 select.form-control[size], select.form-control[multiple] {
   height: auto;
+  width: auto;
 }
 
 textarea.form-control {

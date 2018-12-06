@@ -52,12 +52,12 @@
 		
 		Condominio c = cc.buscarPorId(condominio);
 		
-		String idAux = request.getParameter("id");
+		long id = Long.parseLong(request.getParameter("id"));
 		 
-		if(idAux != null && !idAux.isEmpty()) {
+		/* if(idAux != null && !idAux.isEmpty()) {
 		     Long id = Long.parseLong(request.getParameter("idAux"));
 			
-		}
+		} */
 				
 		String tipoUsuario = request.getParameter("tipoUsuario");
 		String nome = request.getParameter("nome");

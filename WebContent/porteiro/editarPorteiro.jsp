@@ -20,6 +20,8 @@
 	List<Condominio> condominios = cc.listarSemPage();
 %>
 <body>
+	<div class="container">
+	<div class="d-flex justify-content-center h-100">
 <form action="../porteiro/crudPorteiro.jsp" method="POST">
 <div class="card8">
 <div class="col-lg-12">
@@ -34,8 +36,9 @@
 	Celular:<input type="text" style="color:blue;" name="celular" value="<%=p.getCelular()%>"><br>
 	E-mail:<input type="email" style="color:blue;" name="email" value="<%=p.getEmail()%>"><br>
 	Login:<input type="text" style="color:blue;" name="login" value="<%=p.getLogin()%>"><br>
-	Senha:<input type="text" style="color:blue;" name="senha" value="<%=p.getSenha()%>"><br>
-	<select id="condominio"  name="condominio">
+	Senha:<input type="password" style="color:blue;" name="senha" value="<%=p.getSenha()%>"><br>
+	
+	<select  class="form-control" id="condominio"  name="condominio"  >
 			 <option>Selecione o Condominio</option>
 		<%
 			for(Condominio c: condominios){
@@ -43,11 +46,15 @@
 			}	
 		%>
 	</select><br>
-	<input type="submit" value="Atualizar">
+<input type="submit" class="btn btn-primary" value="Atualizar">
+		<input type="button" onclick="history.back()" class="btn btn-default" value="Cancelar">
+		
 	</div>
 	</div>
 	</div>
 
 	</form>
+	</div>
+	</div>
 </body>
 </html>
