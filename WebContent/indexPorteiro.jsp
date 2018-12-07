@@ -45,18 +45,21 @@
 	</li>
   </div>
 </nav>
-<div class="container">
-	<div class="col-md-6">
-		<div class="input-group h2">
-		<form action="teste.jsp" method="post">
-		    <input name="nome" class="form-control" type="text" placeholder="Pesquisar moradores">
+<div class="container" align="center" >
+<div class="barra">
+	<div class="col-md-12 center-block">
+		<div class="input-group h1"><br><br>
+		<form action="teste.jsp" method="post"><br>
+		    <input name="nome" class="form-control" type="text" placeholder="Pesquisar moradores"><br>
 		       <span class="input-group-btn">
+		       
 		           <button class="btn btn-info" type="submit">
-		               <span class="glyphicon glyphicon-search">Buscar</span>		                  
+		               <span class="glyphicon glyphicon-search" align="center" >Buscar</span>		                  
 		           </button>
 		      </span>
 		</form>      
 		</div>		        
+	</div>
 	</div>
 </div>
 	<%@ include file="/estrutura/footer.jsp"%>

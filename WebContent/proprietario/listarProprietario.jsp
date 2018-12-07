@@ -42,8 +42,10 @@
 	
 <!-- /.modal -->
 <div class="container">
-<div class="card8">
-	<div class="row">
+<div class="mx-auto" style="width: 700px;">
+<div class="card8" >
+
+	<div class="row justify-content-md-center">
 		<div class="col-lg-12">
 			<div align="left" class="card-header" style="color: white">
 			<h1>Proprietários</h1>
@@ -96,6 +98,7 @@
 		</div>
 	</div>
 	</div>
+</div>
 </div>
 <!-- INICIO PAGINAÇÃO PROPRIETARIO -->	
 <script>

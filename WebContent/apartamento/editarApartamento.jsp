@@ -39,7 +39,7 @@
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 <form action="crudApartamento.jsp" method="POST">
-<div class="card7">
+<div class="card4">
 <div class="col-lg-12">
 
 
@@ -47,10 +47,10 @@
 		<input type="hidden" name="id" value="<%=a.getId()%>">
 		
 		
-			<div class="card-body4" align="center">
+			<div class="card-body2" align="center">
 			  <div class="row">
   		
-  		<div class="col col-md-6">
+  		<div class="col col-md-6 center-block">
 		<select class="form-control" id="morador" name="morador" style="height:2.5em;">
 			<option value="0">Selecione o morador</option>
 		<%
@@ -62,7 +62,7 @@
 		
 		  <div class="row">
   		
-  		<div class="col col-md-6">
+  		<div class="col col-md-6 center-block">
 		<select class="form-control" id="proprietario" name="proprietario" style="height:2.5em;">
 			<option>Selecione o proprietario</option>
 			
@@ -73,11 +73,11 @@
 		%>
 		</select></div></div><br>
 		
-		<br><span class="input-label">Numero Ap:</span><input type="number" style="color:blue;" name="numero"><br>
+		<br><span class="input-label">Numero Ap:   </span><input type="number" style="color:blue;" name="numero"><br>
 		
-		<br><span class="input-label">Bloco Ap:</span><input type="text" style="color:blue;" name="bloco"><br>
+		<br><span class="input-label">Bloco Ap:   </span><input type="text" style="color:blue;" name="bloco"><br>
 		
-		<span class="input-label">Apartamento Ocupado?</span><input type="checkbox" style="color:blue;" name="ocupado"> <br>
+		<span class="input-label">Apartamento Ocupado?  </span><input type="checkbox" style="color:blue;" name="ocupado"> <br>
 		
 		<div align="center" class="container-contact100-form-btn">
 						<input type="submit" class="btn btn-primary" value="Atualizar">

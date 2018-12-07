@@ -23,13 +23,13 @@
 	<div class="container">
 	<div class="d-flex justify-content-center h-100">
 <form action="../porteiro/crudPorteiro.jsp" method="POST">
-<div class="card8">
+<div class="card2">
 <div class="col-lg-12">
 	<input type="hidden" name="acao" value="editarPorteiro">
 	<input type="hidden" name="tipoUsuario" value="porteiro"><!--Não alterar este campo-->
 	<input type="hidden" name="id" value="<%=p.getId()%>">
 	
-	<div class="card-body4" align="center">
+	<div class="card-body2" align="center">
 	Nome:<input type="text" style="color:blue;" name="nome" value="<%=p.getNome()%>"><br>
 	CPF:<input type="text" style="color:blue;" name="cpf" value="<%=p.getCpf()%>"><br>
 	Telefone:<input type="text" style="color:blue;" name="telefone" value="<%=p.getTelefone()%>"><br>
@@ -41,7 +41,7 @@
 	
 	  <div class="row">
   		
-  		<div class="col col-md-6">
+  		<div class="col col-md-6 center-block">
 	<select  class="form-control" id="condominio"  name="condominio" style="height:2.5em;" >
 			 <option>Selecione o Condominio</option>
 		<%

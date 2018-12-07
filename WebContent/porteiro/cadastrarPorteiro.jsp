@@ -37,20 +37,19 @@
   <span class="input-label"><h5>Telefone:</h5></span><input type="text" style="color:blue;" name="telefone"   onkeypress="return justNumber(event)" required>
   <span class="input-label"><h5>Celular:</h5></span><input type="text" style="color:blue;" name="celular"   onkeypress="return justNumber(event)" required> <br>
   
+  <br>
   
-  <div class="row">
+	  <div class="row">
   		
-  		<div class="col col-md-6">
-  		<select class="form-control" id="condominio" name="condominio" style="height:2.5em;">
-  			<option>Selecione o Condominio</option>
-  			<%
-  				for(Condominio c: condominios){
-  					out.print("<option value='" + c.getId() + "'>" + c.getNome() + "</option>");
-  				}
-  			%>
-  		</select>
-  		</div>
-  </div>
+  		<div class="col col-md-6 center-block">
+	<select  class="form-control" id="condominio"  name="condominio" style="height:2.5em;" >
+			 <option>Selecione o Condominio</option>
+		<%
+			for(Condominio c: condominios){
+				out.print("<option value='" + c.getId() + "'>"+ c.getNome() + "</option>");
+			}	
+		%>
+	</select></div></div><br>
   <span class="input-label"><h5>Login:</h5></span><input type="text" style="color:blue;" name="login"    required> <br>
   <span class="input-label"><h5>Senha:</h5></span><input type="password" style="color:blue;" name="senha"    required> <br>
   

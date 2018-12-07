@@ -44,10 +44,11 @@
 				<div class="wrap-input100 rs1 validate-input">				
 				<div class="form-container">
 		
+		
+		 
 		  <div class="row">
-  		
-  		<div class="col col-md-6">
-		<select class="form-control" id="morador" name="morador" style="height:2.5em;">
+  		<div class="col col-md-6 center-block" style="width:100%;">
+		<select class="form-control inputcent" id="morador" name="morador" style="height:2.5em;" >
 		
 			 <option value="0">Selecione o morador</option>
 		<%
@@ -62,7 +63,7 @@
 		<br>
 		  <div class="row">
   		
-  		<div class="col col-md-6">
+  		<div class="col col-md-6 center-block" >
 		<select class="form-control" id="proprietario" name="proprietario" style="height:2.5em;">
 			<option>Selecione o proprietario</option>
 			<%
