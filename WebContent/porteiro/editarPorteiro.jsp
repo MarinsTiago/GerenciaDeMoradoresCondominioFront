@@ -38,14 +38,18 @@
 	Login:<input type="text" style="color:blue;" name="login" value="<%=p.getLogin()%>"><br>
 	Senha:<input type="password" style="color:blue;" name="senha" value="<%=p.getSenha()%>"><br>
 	
-	<select  class="form-control" id="condominio"  name="condominio"  >
+	
+	  <div class="row">
+  		
+  		<div class="col col-md-6">
+	<select  class="form-control" id="condominio"  name="condominio" style="height:2.5em;" >
 			 <option>Selecione o Condominio</option>
 		<%
 			for(Condominio c: condominios){
 				out.print("<option value='" + c.getId() + "'>"+ c.getNome() + "</option>");
 			}	
 		%>
-	</select><br>
+	</select></div></div><br>
 <input type="submit" class="btn btn-primary" value="Atualizar">
 		<input type="button" onclick="history.back()" class="btn btn-default" value="Cancelar">
 		

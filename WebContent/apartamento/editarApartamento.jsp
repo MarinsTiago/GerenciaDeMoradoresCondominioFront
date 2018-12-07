@@ -45,19 +45,25 @@
 
 		<input type="hidden" name="acao" value="editarApartamento">
 		<input type="hidden" name="id" value="<%=a.getId()%>">
-			<div class="card-body4" align="center">
-		<select class="form-control" id="morador" name="morador">
 		
-	
+		
+			<div class="card-body4" align="center">
+			  <div class="row">
+  		
+  		<div class="col col-md-6">
+		<select class="form-control" id="morador" name="morador" style="height:2.5em;">
 			<option value="0">Selecione o morador</option>
 		<%
 			for(Morador m: moradores){
 				out.print("<option value='" + m.getId() + "'>"+ m.getNome() + "</option>");
 			}	
 		%>
-		</select><br>
+		</select></div></div><br>
 		
-		<select class="form-control" id="proprietario" name="proprietario">
+		  <div class="row">
+  		
+  		<div class="col col-md-6">
+		<select class="form-control" id="proprietario" name="proprietario" style="height:2.5em;">
 			<option>Selecione o proprietario</option>
 			
 			<%
@@ -65,7 +71,7 @@
 				out.print("<option value='" + p.getId() + "'>"+ p.getNome() + "</option>");
 			}	
 		%>
-		</select><br>
+		</select></div></div><br>
 		
 		<br><span class="input-label">Numero Ap:</span><input type="number" style="color:blue;" name="numero"><br>
 		

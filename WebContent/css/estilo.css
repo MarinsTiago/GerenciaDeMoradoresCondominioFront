@@ -34,8 +34,8 @@ background-color: rgba(0,0,0,0.5) !important;
 }
 
 .card3{
-height: 500px;
-margin-top: 100px;
+
+
 margin-bottom: auto;
 width: 400px;
 background-color: rgba(0,0,0,0.5) !important;
@@ -261,5 +261,9 @@ color: white;
 	height: auto;
 }
 
+ .col-centered{
+        float: none;
+        margin: 0 auto;
+    }
 
 }

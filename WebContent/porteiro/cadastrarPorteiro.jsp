@@ -36,8 +36,11 @@
   <span class="input-label"><h5>Email:</h5></span><input type="text" style="color:blue;" name="email"   required> <br>
   <span class="input-label"><h5>Telefone:</h5></span><input type="text" style="color:blue;" name="telefone"   onkeypress="return justNumber(event)" required>
   <span class="input-label"><h5>Celular:</h5></span><input type="text" style="color:blue;" name="celular"   onkeypress="return justNumber(event)" required> <br>
-  <div class="mb-3">
+  
+  
+  <div class="row">
   		
+  		<div class="col col-md-6">
   		<select class="form-control" id="condominio" name="condominio" style="height:2.5em;">
   			<option>Selecione o Condominio</option>
   			<%
@@ -46,6 +49,7 @@
   				}
   			%>
   		</select>
+  		</div>
   </div>
   <span class="input-label"><h5>Login:</h5></span><input type="text" style="color:blue;" name="login"    required> <br>
   <span class="input-label"><h5>Senha:</h5></span><input type="password" style="color:blue;" name="senha"    required> <br>
@@ -55,16 +59,19 @@
 
 		</div>
 		</div>
-	<div align="center" class="container-contact100-form-btn">
+	<div align="left" class="container-contact100-form-btn">
+	
+	<a class="btn btn-primary" type="button" href="javascript:history.back()">Voltar a página anterior</a>
 			<button style="background-color: #00BFFF"  class="contact100-form-btn">
 				Submit
 				</button>
+				
+			
+		
 		</div>
 		<br>
 		</div>
-		<div align="center">
-			<a class="btn btn-primary" type="button" href="javascript:history.back()">Voltar a página anterior</a>
-		</div>
+		
 		
 	</form>
 	</div>
